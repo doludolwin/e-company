@@ -1,1 +1,36 @@
 
+
+.navbar{
+    background-color: $dark-blue;
+    border-radius: 0px;
+    .navbar-brand{
+        margin-left: 2%;
+    }
+}
+
+.navbar-light{
+    .navbar-toggler {
+        background-image: none;
+        border-color: rgba(0,0,0,0);
+        .white {
+            color: $white;
+            font-size: 1.6rem;
+        }
+    }
+    .navbar-nav {
+        @media only screen and (min-width: $screen-mid) {
+            .nav-item{
+                float: right;
+            }
+        }
+        .nav-link {
+            color: $light-grey;
+            text-transform: uppercase;
+            font-family: $arial;
+            font-size: .9rem;
+        }
+        .nav-link:hover {
+            color: $white;
+        }
+    }
+}

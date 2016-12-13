@@ -3,9 +3,12 @@
 .navbar{
     background-color: $dark-blue;
     border-radius: 0px;
-    .navbar-brand{
-        margin-left: 2%;
+    @media only screen and (min-width: $screen-mid) {
+        padding: .7rem 3.4rem
     }
+    // .navbar-brand{
+    //     margin-left: 2%;
+    // }
 }
 
 .navbar-light{
@@ -21,16 +24,41 @@
         @media only screen and (min-width: $screen-mid) {
             .nav-item{
                 float: right;
+                margin-left: 1rem;
+                margin-top: 3px;
+            }
+        }
+        @media only screen and (max-width: $screen-mid) {
+            .nav-item{
+                border-top: solid 2px;
+                padding: 4px 0px 4px 0px;
+                span{
+                    margin-left: 1rem;
+                }
+            }
+        }
+        .nav-item {
+
+            span{
+                // margin-left: 0px;
+            }
+            .white {
+                color: $light-grey;
+            }
+            span:hover .white {
+                color: $white;
             }
         }
         .nav-link {
-            color: $light-grey;
-            text-transform: uppercase;
+            display: inline-block;
+            // color: $light-grey;
+            // text-transform: uppercase;
             font-family: $arial;
             font-size: .9rem;
         }
-        .nav-link:hover {
-            color: $white;
-        }
     }
 }
+
+// .navbar-nav .nav-item+.nav-item {
+//     margin-left: 8px;
+// }

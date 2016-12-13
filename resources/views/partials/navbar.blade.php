@@ -9,21 +9,30 @@
           </a>
           @if (Route::has('login'))
               <ul class="nav navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link" href="{{ url('/login') }}">team</a>
-                  </li>
                   @if (Auth::check())
                   <li class="nav-item">
                       <a class="nav-link" href="{{ url('/home') }}">Home</a>
                   </li>
                   @else
                   <li class="nav-item">
-                      <a class="nav-link" href="{{ url('/login') }}">Login</a>
+                      <span>
+                          <i class="fa fa-sign-in white" aria-hidden="true"></i>
+                          <a class="nav-link white" href="{{ url('/login') }}">Sign in</a>
+                      </span>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{{ url('/register') }}">Register</a>
+                      <span>
+                          <i class="fa fa-user-plus white" aria-hidden="true"></i>
+                          <a class="nav-link white" href="{{ url('/register') }}">Sign up</a>
+                      </span>
                   </li>
                   @endif
+                  <li class="nav-item">
+                      <span>
+                          <i class="fa fa-users white" aria-hidden="true"></i>
+                          <a class="nav-link white" href="{{ url('/login') }}">Team</a>
+                      </span>
+                  </li>
               </ul>
           @endif
        </div>

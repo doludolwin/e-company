@@ -1,14 +1,13 @@
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
 // Variables
 @import "variables";
+@import "./modules/navbar.scss";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+
 body{
-	background-image: url("../images/bg.png")
-	// background-image: url("{{ assets('images/bg.jpg') }}");
+	background-image: url("../images/bg.png");
 }

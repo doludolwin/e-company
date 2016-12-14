@@ -16,6 +16,8 @@
         font-weight: bold;
         display: -webkit-flex;
         display: flex;
+        -webkit-align-items: center;
+    			align-items: center;
         -webkit-justify-content: center;
 				justify-content: center;
         -webkit-flex-direction: column;
@@ -28,11 +30,46 @@
         }
         .panel-body{
             font-weight: normal;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-justify-content: center;
-                    justify-content: center;
-
+            width: 300px;
+            // display: -webkit-flex;
+            // display: flex;
+            // -webkit-align-items: center;
+        	// 		align-items: center;
+            // -webkit-justify-content: center;
+            //         justify-content: center;
+            .form-group {
+                margin-bottom: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            .checkbox{
+                margin-top: 10px;
+                label{
+                    cursor: pointer;
+                    [type="checkbox"]{
+                        display: none;
+                    }
+                    [type="checkbox"]+.item-text:before{
+                        content: "\f096";
+                        font-family: FontAwesome;
+                        speak: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        text-transform: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        width: 1em;
+                        display: inline-block;
+                        margin-right: 5px;
+                        color: $dark-grey;
+                    }
+                    [type="checkbox"]:checked+.item-text:before{
+                        content: "\f14a";
+                        color: $dark-grey;
+                        animation: tick 170ms ease-in;
+                    }
+                }
+            }
             input{
                 font-size: 1rem;
                 margin-top: 7px;
@@ -41,7 +78,6 @@
                 border: none;
                 background-color: lighten($lightest-grey,15%);
                 color: lighten($dark-grey,15%);
-                // color: red;
             }
             button{
                 @include rounded(5px);
@@ -49,10 +85,19 @@
                 margin-top: 20px;
                 @include background-gradient($green,$skyblue);
                 border: none;
-                margin-left: 25%;
+                margin-left: 27%;
                 @media only screen and (min-width: $screen-mid){
                     margin-left: 50%;
                 }
+            }
+            .btn-link{
+                margin-top: 20px;
+                width: 100%;
+                color: $blue;
+                @media only screen and (min-width: $screen-mid){
+                    width: 250px;
+                }
+                // text-align: center;
             }
         }
         width: 280px;
@@ -62,5 +107,17 @@
             width: 400px;
             height: 400px;
         }
+    }
+}
+
+@keyframes tick {
+    0%{
+        transform: scale(0);
+    }
+    90%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
     }
 }

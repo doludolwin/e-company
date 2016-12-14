@@ -85,6 +85,8 @@
   font-weight: bold;
   display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-orient: vertical;
@@ -104,10 +106,47 @@
 
 .middle .panel-default .panel-body {
   font-weight: normal;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
+  width: 300px;
+}
+
+.middle .panel-default .panel-body .form-group {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.middle .panel-default .panel-body .checkbox {
+  margin-top: 10px;
+}
+
+.middle .panel-default .panel-body .checkbox label {
+  cursor: pointer;
+}
+
+.middle .panel-default .panel-body .checkbox label [type="checkbox"] {
+  display: none;
+}
+
+.middle .panel-default .panel-body .checkbox label [type="checkbox"] + .item-text:before {
+  content: "\f096";
+  font-family: FontAwesome;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  width: 1em;
+  display: inline-block;
+  margin-right: 5px;
+  color: #636363;
+}
+
+.middle .panel-default .panel-body .checkbox label [type="checkbox"]:checked + .item-text:before {
+  content: "\f14a";
+  color: #636363;
+  -webkit-animation: tick 170ms ease-in;
+  animation: tick 170ms ease-in;
 }
 
 .middle .panel-default .panel-body input {
@@ -133,7 +172,7 @@
   background: linear-gradient(to right, #00AA58, #00A6B9);
   /* Standard syntax */
   border: none;
-  margin-left: 25%;
+  margin-left: 27%;
 }
 
 @media only screen and (min-width: 992px) {
@@ -142,10 +181,52 @@
   }
 }
 
+.middle .panel-default .panel-body .btn-link {
+  margin-top: 20px;
+  width: 100%;
+  color: #3266AD;
+}
+
+@media only screen and (min-width: 992px) {
+  .middle .panel-default .panel-body .btn-link {
+    width: 250px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .middle .panel-default {
     width: 400px;
     height: 400px;
+  }
+}
+
+@-webkit-keyframes tick {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  90% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes tick {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  90% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 

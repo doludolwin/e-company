@@ -11,26 +11,37 @@
               <ul class="nav navbar-nav">
                   @if (Auth::check())
                   <li class="nav-item">
-                      <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                      <span>
+                          <a class="nav-link" href="{{ url('/home') }}">
+                              <i class="fa fa-sign-out white" aria-hidden="true"></i>
+                              Sign out
+                          </a>
+                      </span>
                   </li>
                   @else
                   <li class="nav-item">
                       <span>
-                          <i class="fa fa-sign-in white" aria-hidden="true"></i>
-                          <a class="nav-link white" href="{{ url('/login') }}">Sign in</a>
+                          <a class="nav-link white" href="{{ url('/login') }}">
+                              <i class="fa fa-sign-in white" aria-hidden="true"></i>
+                              Sign in
+                          </a>
                       </span>
                   </li>
                   <li class="nav-item">
                       <span>
-                          <i class="fa fa-user-plus white" aria-hidden="true"></i>
-                          <a class="nav-link white" href="{{ url('/register') }}">Sign up</a>
+                          <a class="nav-link white" href="{{ url('/register') }}">
+                              <i class="fa fa-user-plus white" aria-hidden="true"></i>
+                              Sign up
+                          </a>
                       </span>
                   </li>
                   @endif
                   <li class="nav-item">
                       <span>
-                          <i class="fa fa-users white" aria-hidden="true"></i>
-                          <a class="nav-link white" href="{{ url('/login') }}">Team</a>
+                          <a class="nav-link white" href="{{ url('/login') }}">
+                              <i class="fa fa-users white" aria-hidden="true"></i>
+                              Team
+                          </a>
                       </span>
                   </li>
               </ul>

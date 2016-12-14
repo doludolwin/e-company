@@ -12,7 +12,7 @@
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-                            <div class="col-md-10">
+                            <div class="col-md-12 col-xs-12">
                                 <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -25,7 +25,7 @@
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 
-                            <div class="col-md-10">
+                            <div class="col-md-12 col-xs-12">
                                 <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -37,10 +37,10 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-12 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember"> Remember Me
+                                        <input type="checkbox" name="remember"> <span class="item-text">Remember Me</span>
                                     </label>
                                 </div>
                             </div>

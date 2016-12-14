@@ -46,10 +46,12 @@
                 color: $light-grey;
             }
             span:hover .white {
+                cursor: pointer;
                 color: $white;
             }
         }
         .nav-link {
+            cursor: none;
             display: inline-block;
             // color: $light-grey;
             // text-transform: uppercase;
@@ -58,7 +60,3 @@
         }
     }
 }
-
-// .navbar-nav .nav-item+.nav-item {
-//     margin-left: 8px;
-// }

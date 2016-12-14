@@ -16,6 +16,9 @@ require('laravel-elixir-vue-2');
 
 elixir((mix) => {
     mix.sass('app.scss')
-       .copy('resources/assets/images', 'public/images');
+       .copy('resources/assets/images', 'public/images')
+       .browserSync({
+            proxy : 'localhost:8000'
+       });
     mix.webpack('app.js');
 });

@@ -43,10 +43,12 @@
 }
 
 .navbar-light .navbar-nav .nav-item span:hover .white {
+  cursor: pointer;
   color: #FFFFFF;
 }
 
 .navbar-light .navbar-nav .nav-link {
+  cursor: none;
   display: inline-block;
   font-family: arial;
   font-size: .9rem;

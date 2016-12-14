@@ -1,1 +1,27 @@
 //mixins
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin background-gradient($first,$second) {
+    background: $first; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, $first , $second); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, $first, $second); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, $first, $second); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, $first , $second); /* Standard syntax */
+}
+
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}

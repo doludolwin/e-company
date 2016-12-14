@@ -1,0 +1,66 @@
+
+.middle{
+    width: 100%;
+    height: 500px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+			align-items: center;
+    -webkit-justify-content: center;
+			justify-content: center;
+    -webkit-flex-direction: column;
+			flex-direction: column;
+    .panel-default{
+        @include box-shadow(1px,1px,8px,$lightest-grey);
+        font-family: $lato;
+        font-weight: bold;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+				justify-content: center;
+        -webkit-flex-direction: column;
+        		flex-direction: column;
+        .panel-heading{
+            text-align: center;
+            font-size: 1.5rem;
+            color: $light-grey;
+            margin-bottom: 20px;
+        }
+        .panel-body{
+            font-weight: normal;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: center;
+                    justify-content: center;
+
+            input{
+                font-size: 1rem;
+                margin-top: 7px;
+                margin-bottom: 7px;
+                @include rounded(2px);
+                border: none;
+                background-color: lighten($lightest-grey,15%);
+                color: lighten($dark-grey,15%);
+                // color: red;
+            }
+            button{
+                @include rounded(5px);
+                width: 100px;
+                margin-top: 20px;
+                @include background-gradient($green,$skyblue);
+                border: none;
+                margin-left: 25%;
+                @media only screen and (min-width: $screen-mid){
+                    margin-left: 50%;
+                }
+            }
+        }
+        width: 280px;
+        background-color: $white;
+        padding: 10px 5px;
+        @media only screen and (min-width: $screen-mid){
+            width: 400px;
+            height: 400px;
+        }
+    }
+}

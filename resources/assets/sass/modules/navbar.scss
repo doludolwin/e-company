@@ -4,16 +4,19 @@
     background-color: $dark-blue;
     border-radius: 0px;
     @media only screen and (min-width: $screen-mid) {
-        padding: .7rem 3.4rem
+        padding: .7rem 3.4rem;
     }
-    // .navbar-brand{
-    //     margin-left: 2%;
-    // }
+    @media only screen and (max-width: $screen-mid) {
+        .navbar-brand {
+            display: none;
+        }
+    }
 }
 
 .navbar-light{
     .navbar-toggler {
-        background-image: none;
+        background-image: url(../images/icons/escores.png);
+        background-size: 100%;
         border-color: rgba(0,0,0,0);
         .white {
             color: $white;
@@ -28,6 +31,8 @@
                 margin-top: 3px;
             }
         }
+
+
         @media only screen and (max-width: $screen-mid) {
             .nav-item{
                 border-top: solid 2px;
@@ -35,6 +40,9 @@
                 span{
                     margin-left: 1rem;
                 }
+            }
+            .nav-item:nth-child(1){
+                border-top: none;
             }
         }
         .nav-item {

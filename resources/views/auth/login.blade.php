@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-xs-12 col-md-offset-2">
+        <div class="col-md-8 col-xs-12 col-md-offset-2 middle">
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
@@ -12,8 +12,8 @@
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" placeholder="email" name="email" value="{{ old('email') }}" required autofocus>
+                            <div class="col-md-10">
+                                <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -25,8 +25,8 @@
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" placeholder="password" name="password" required>
+                            <div class="col-md-10">
+                                <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">

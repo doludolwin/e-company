@@ -1,4 +1,5 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 .navbar {
   background-color: #21252D;
   border-radius: 0px;
@@ -10,8 +11,15 @@
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .navbar .navbar-brand {
+    display: none;
+  }
+}
+
 .navbar-light .navbar-toggler {
-  background-image: none;
+  background-image: url(../images/icons/escores.png);
+  background-size: 100%;
   border-color: transparent;
 }
 
@@ -36,6 +44,9 @@
   .navbar-light .navbar-nav .nav-item span {
     margin-left: 1rem;
   }
+  .navbar-light .navbar-nav .nav-item:nth-child(1) {
+    border-top: none;
+  }
 }
 
 .navbar-light .navbar-nav .nav-item .white {
@@ -52,6 +63,90 @@
   display: inline-block;
   font-family: arial;
   font-size: .9rem;
+}
+
+.middle {
+  width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.middle .panel-default {
+  box-shadow: 1px 1px 8px #C5C6C7;
+  font-family: lato;
+  font-weight: bold;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 280px;
+  background-color: #FFFFFF;
+  padding: 10px 5px;
+}
+
+.middle .panel-default .panel-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #848484;
+  margin-bottom: 20px;
+}
+
+.middle .panel-default .panel-body {
+  font-weight: normal;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.middle .panel-default .panel-body input {
+  font-size: 1rem;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-radius: 2px;
+  border: none;
+  background-color: #ececed;
+  color: #898989;
+}
+
+.middle .panel-default .panel-body button {
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 20px;
+  background: #00AA58;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #00AA58, #00A6B9);
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #00AA58, #00A6B9);
+  /* Standard syntax */
+  border: none;
+  margin-left: 25%;
+}
+
+@media only screen and (min-width: 992px) {
+  .middle .panel-default .panel-body button {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .middle .panel-default {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 body {

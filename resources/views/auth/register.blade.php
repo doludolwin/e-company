@@ -1,67 +1,79 @@
 @extends('layouts.wrapper')
 
 @section('content')
+
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 col-xs-12 col-md-offset-2 middle">
+    <div class="row middle">
+        <div class="col-md-6 col-lg-4 col-sm-8 col-xs-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Join Us</div>
+                <div class="panel-heading">
+                    <h3>join us</h3>
+                    <p>Good luck and have fun.</p>
+                </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    <form class="form-vertical" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
+                        <div class="panel-wrapper">
+<!-- name field -->
+                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                <div>
+                                    <input id="name" type="text" class="form-control" placeholder="Name" name="name" value="{{ old('name') }}" required autofocus>
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-
-                            <div class="col-md-12 col-xs-12">
-                                <input id="name" type="text" class="form-control" placeholder="Name" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+                                    @if ($errors->has('name'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('name') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
+<!-- end of name field -->
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+<!-- mail address field -->
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <div>
+                                    <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required>
 
-                            <div class="col-md-12 col-xs-12">
-                                <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
+<!-- end of mail field -->
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+<!-- password field -->
+                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                <div>
+                                    <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
 
-                            <div class="col-md-12 col-xs-12">
-                                <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
+<!-- end of password field -->
 
-                        <div class="form-group">
-
-                            <div class="col-md-12 col-xs-12">
-                                <input id="password-confirm" type="password" class="form-control"  placeholder="Confirm Password" name="password_confirmation" required>
+<!-- confirm password field -->
+                            <div class="form-group">
+                                <div>
+                                    <input id="password-confirm" type="password" class="form-control"  placeholder="Confirm Password" name="password_confirmation" required>
+                                </div>
                             </div>
-                        </div>
+<!-- end of confirm password field -->
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Sign up
-                                </button>
+<!-- log in button -->
+                            <div class="form-group">
+                                <div class="button">
+                                    <button type="submit" class="btn btn-primary">
+                                        Sign up
+                                    </button>
+                                </div>
                             </div>
+<!-- end of submit button -->
+
                         </div>
                     </form>
                 </div>
@@ -69,4 +81,5 @@
         </div>
     </div>
 </div>
+
 @endsection

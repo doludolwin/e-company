@@ -3,10 +3,10 @@
 .navbar{
     background-color: $dark-blue;
     border-radius: 0px;
-    @media only screen and (min-width: $screen-mid) {
+    @media only screen and (min-width: $screen-md) {
         padding: .7rem 3.4rem;
     }
-    @media only screen and (max-width: $screen-mid) {
+    @media only screen and (max-width: $screen-md) {
         .navbar-brand {
             display: none;
         }
@@ -24,7 +24,7 @@
         }
     }
     .navbar-nav {
-        @media only screen and (min-width: $screen-mid) {
+        @media only screen and (min-width: $screen-md) {
             .nav-item{
                 float: right;
                 margin-left: 1rem;
@@ -33,7 +33,7 @@
         }
 
 
-        @media only screen and (max-width: $screen-mid) {
+        @media only screen and (max-width: $screen-md) {
             .nav-item{
                 border-top: solid 2px;
                 padding: 4px 0px 4px 0px;

@@ -1,7 +1,119 @@
+//
+// .middle{
+//     width: 100%;
+//     height: 500px;
+//     display: -webkit-flex;
+//     display: flex;
+//     -webkit-align-items: center;
+// 			align-items: center;
+//     -webkit-justify-content: center;
+// 			justify-content: center;
+//     -webkit-flex-direction: column;
+// 			flex-direction: column;
+//     .panel-default{
+//         @include box-shadow(1px,1px,8px,$lightest-grey);
+//         font-family: $lato;
+//         font-weight: bold;
+//         display: -webkit-flex;
+//         display: flex;
+//         -webkit-align-items: center;
+//     			align-items: center;
+//         -webkit-justify-content: center;
+// 				justify-content: center;
+//         -webkit-flex-direction: column;
+//         		flex-direction: column;
+//         .panel-heading{
+//             text-align: center;
+//             font-size: 1.5rem;
+//             color: $light-grey;
+//             margin-bottom: 20px;
+//         }
+//         .panel-body{
+//             font-weight: normal;
+//             width: 300px;
+//             // display: -webkit-flex;
+//             // display: flex;
+//             // -webkit-align-items: center;
+//         	// 		align-items: center;
+//             // -webkit-justify-content: center;
+//             //         justify-content: center;
+//             .form-group {
+//                 margin-bottom: 1rem;
+//                 margin-left: 1rem;
+//                 margin-right: 1rem;
+//             }
+//             .checkbox{
+//                 margin-top: 10px;
+//                 label{
+//                     cursor: pointer;
+//                     [type="checkbox"]{
+//                         display: none;
+//                     }
+//                     [type="checkbox"]+.item-text:before{
+//                         content: "\f096";
+//                         font-family: FontAwesome;
+//                         speak: none;
+//                         font-style: normal;
+//                         font-weight: normal;
+//                         text-transform: none;
+//                         line-height: 1;
+//                         -webkit-font-smoothing: antialiased;
+//                         width: 1em;
+//                         display: inline-block;
+//                         margin-right: 5px;
+//                         color: $dark-grey;
+//                     }
+//                     [type="checkbox"]:checked+.item-text:before{
+//                         content: "\f14a";
+//                         color: $dark-grey;
+//                         animation: tick 170ms ease-in;
+//                     }
+//                 }
+//             }
+//             input{
+//                 font-size: 1rem;
+//                 margin-top: 7px;
+//                 margin-bottom: 7px;
+//                 @include rounded(2px);
+//                 border: none;
+//                 background-color: lighten($lightest-grey,15%);
+//                 color: lighten($dark-grey,15%);
+//             }
+//             button{
+//                 @include rounded(5px);
+//                 width: 100px;
+//                 margin-top: 20px;
+//                 @include background-gradient($green,$skyblue);
+//                 border: none;
+//                 margin-left: 27%;
+//                 @media only screen and (min-width: $screen-mid){
+//                     margin-left: 50%;
+//                 }
+//             }
+//             .btn-link{
+//                 margin-top: 20px;
+//                 width: 100%;
+//                 color: $blue;
+//                 @media only screen and (min-width: $screen-mid){
+//                     width: 250px;
+//                 }
+//                 // text-align: center;
+//             }
+//         }
+//         width: 280px;
+//         background-color: $white;
+//         padding: 10px 5px;
+//         @media only screen and (min-width: $screen-mid){
+//             width: 400px;
+//             height: 400px;
+//         }
+//     }
+// }
+//
+
 
 .middle{
-    width: 100%;
-    height: 500px;
+    height: 75vh;
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
@@ -10,105 +122,110 @@
 			justify-content: center;
     -webkit-flex-direction: column;
 			flex-direction: column;
+
     .panel-default{
+        height: 450px;
+        width: 100%;
+        @media only screen and (min-width: $screen-xs){
+            width: 350px;
+            height: 450px;
+        }
+        background-color: $white;
         @include box-shadow(1px,1px,8px,$lightest-grey);
         font-family: $lato;
         font-weight: bold;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-align-items: center;
-    			align-items: center;
-        -webkit-justify-content: center;
-				justify-content: center;
-        -webkit-flex-direction: column;
-        		flex-direction: column;
+
         .panel-heading{
             text-align: center;
-            font-size: 1.5rem;
-            color: $light-grey;
-            margin-bottom: 20px;
+            padding-top: 30px;
+            font-family: $arial;
+            h3{
+                color: $darkest-grey;
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 0px;
+                text-transform: uppercase;
+            }
+            p{
+                color: $lightest-grey;
+                font-weight: normal;
+                font-size: 1rem;
+                letter-spacing: 1px;;
+            }
         }
         .panel-body{
-            font-weight: normal;
-            width: 300px;
-            // display: -webkit-flex;
-            // display: flex;
-            // -webkit-align-items: center;
-        	// 		align-items: center;
-            // -webkit-justify-content: center;
-            //         justify-content: center;
-            .form-group {
-                margin-bottom: 1rem;
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-            .checkbox{
-                margin-top: 10px;
-                label{
-                    cursor: pointer;
-                    [type="checkbox"]{
-                        display: none;
-                    }
-                    [type="checkbox"]+.item-text:before{
-                        content: "\f096";
-                        font-family: FontAwesome;
-                        speak: none;
-                        font-style: normal;
-                        font-weight: normal;
-                        text-transform: none;
-                        line-height: 1;
-                        -webkit-font-smoothing: antialiased;
-                        width: 1em;
-                        display: inline-block;
-                        margin-right: 5px;
-                        color: $dark-grey;
-                    }
-                    [type="checkbox"]:checked+.item-text:before{
-                        content: "\f14a";
-                        color: $dark-grey;
-                        animation: tick 170ms ease-in;
+            margin-top: 60px;
+
+            .panel-wrapper{
+                padding: 0px 30px 0px 30px;
+                input{
+                    font-size: 1rem;
+                    font-weight: normal;
+                    margin-top: 7px;
+                    margin-bottom: 7px;
+                    @include rounded(2px);
+                    border: none;
+                    background-color: lighten($lightest-grey,15%);
+                    color: lighten($dark-grey,15%);
+                }
+                .checkbox{
+                    color: $darkest-grey;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    margin-top: 10px;
+                    label{
+                        cursor: pointer;
+                        [type="checkbox"]{
+                            display: none;
+                        }
+                        [type="checkbox"]+.item-text:before{
+                            content: "\f096";
+                            font-family: FontAwesome;
+                            speak: none;
+                            font-style: normal;
+                            font-weight: normal;
+                            text-transform: none;
+                            line-height: 1;
+                            -webkit-font-smoothing: antialiased;
+                            width: 1em;
+                            display: inline-block;
+                            margin-right: 3px;
+                            color: $dark-grey;
+                        }
+                        [type="checkbox"]:checked+.item-text:before{
+                            content: "\f14a";
+                            color: $dark-grey;
+                            animation: tick 170ms ease-in;
+                        }
                     }
                 }
-            }
-            input{
-                font-size: 1rem;
-                margin-top: 7px;
-                margin-bottom: 7px;
-                @include rounded(2px);
-                border: none;
-                background-color: lighten($lightest-grey,15%);
-                color: lighten($dark-grey,15%);
-            }
-            button{
-                @include rounded(5px);
-                width: 100px;
-                margin-top: 20px;
-                @include background-gradient($green,$skyblue);
-                border: none;
-                margin-left: 27%;
-                @media only screen and (min-width: $screen-mid){
-                    margin-left: 50%;
+                .button{
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    button{
+                        @include rounded(5px);
+                        width: 100px;
+                        margin-top: 0px;
+                        @include background-gradient($green,$skyblue);
+                        border: none;
+                    }
+                }
+                .forgot{
+                    text-align: center;
+                    margin-top: 20px;
+                    color: $blue;
+                    font-size: .9rem;
                 }
             }
-            .btn-link{
-                margin-top: 20px;
-                width: 100%;
-                color: $blue;
-                @media only screen and (min-width: $screen-mid){
-                    width: 250px;
-                }
-                // text-align: center;
-            }
-        }
-        width: 280px;
-        background-color: $white;
-        padding: 10px 5px;
-        @media only screen and (min-width: $screen-mid){
-            width: 400px;
-            height: 400px;
         }
     }
+
 }
+
 
 @keyframes tick {
     0%{

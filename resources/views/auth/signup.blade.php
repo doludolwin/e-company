@@ -17,11 +17,12 @@
 <!-- profile pic field  -->
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 flex-middle-horizontal">
-                                    <label class="fileContainer" id="container">
-                                	    <input type="file" v-on:change="readURL(this)" />
-                                	    {{-- <img id="blah" src="#" alt="your image" /> --}}
-                                	</label>
-
+                                    <div class="fileContainer flex-middle-horizontal flex-middle-vertical" id="container">
+                                        <label>
+                                    	    <input type="file" @change="readURL" />
+                                    	    <img id="blah" :src="image" alt="your image" style="display: none; position: relative; top: -50%; left: -50%;" />
+                                    	</label>
+                                    </div>
                                     @if ($errors->has('email'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('email') }}</strong>

@@ -87,11 +87,28 @@
         		    overflow: hidden;
         		    position: relative;
         		    text-align: center;
+                    margin-bottom: 10px;
         		}
 
-        		.fileContainer [type=file] {
-        		 display: none;
-        		}
+                label{
+                    height: 35px;
+                    width: 35px;
+                    background-image: url("../images/icons/plus.png");
+                    opacity: .5;
+                    @include transition(opacity,.2s);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-color: none;
+                    cursor: pointer;
+                    margin-bottom: 0;
+                    [type=file] {
+                        display: none;
+            		}
+                }
+                label:hover{
+                    opacity: 1;
+                }
+
 
         		/* Example stylistic flourishes */
 
@@ -103,10 +120,6 @@
         		    border-radius: 100%;
         		    float: left;
         		    padding: .5em;
-        		}
-
-        		.fileContainer [type=file] {
-        		    cursor: pointer;
         		}
                 // profile pic end
 

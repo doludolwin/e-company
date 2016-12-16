@@ -17,9 +17,26 @@ Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
     el: '#panel',
+    data:{
+        image: ''
+    },
     methods:{
-        readURL(img){
-            // document.getElementById("container").style.backgroundImage = url(img.target.result);
+        readURL(e){
+            let files = e.target.files || e.dataTransfer.files;
+            if (!files.length)
+                return;
+            this.showImage(files[0]);
+        },
+        showImage(file){
+            console.log(e);
+            // var image = new image();
+            let reader = new FileReader();
+            let vm = this;
+
+            reader.onload = (e) => {
+                vm.image = e.targt.result;
+            };
+            reader.readAsDataURL(file);
         }
     }
 });

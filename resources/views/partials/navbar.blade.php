@@ -4,7 +4,7 @@
            <!-- <img src="images/icons/escores.png" height="100%" width="100%" alt=""> -->
       </button>
        <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
           <img src="images/icons/LOGO.png" height="25px" width="150px" alt="">
           </a>
           @if (Route::has('login'))

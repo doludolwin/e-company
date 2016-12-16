@@ -1,117 +1,19 @@
-//
-// .middle{
-//     width: 100%;
-//     height: 500px;
-//     display: -webkit-flex;
-//     display: flex;
-//     -webkit-align-items: center;
-// 			align-items: center;
-//     -webkit-justify-content: center;
-// 			justify-content: center;
-//     -webkit-flex-direction: column;
-// 			flex-direction: column;
-//     .panel-default{
-//         @include box-shadow(1px,1px,8px,$lightest-grey);
-//         font-family: $lato;
-//         font-weight: bold;
-//         display: -webkit-flex;
-//         display: flex;
-//         -webkit-align-items: center;
-//     			align-items: center;
-//         -webkit-justify-content: center;
-// 				justify-content: center;
-//         -webkit-flex-direction: column;
-//         		flex-direction: column;
-//         .panel-heading{
-//             text-align: center;
-//             font-size: 1.5rem;
-//             color: $light-grey;
-//             margin-bottom: 20px;
-//         }
-//         .panel-body{
-//             font-weight: normal;
-//             width: 300px;
-//             // display: -webkit-flex;
-//             // display: flex;
-//             // -webkit-align-items: center;
-//         	// 		align-items: center;
-//             // -webkit-justify-content: center;
-//             //         justify-content: center;
-//             .form-group {
-//                 margin-bottom: 1rem;
-//                 margin-left: 1rem;
-//                 margin-right: 1rem;
-//             }
-//             .checkbox{
-//                 margin-top: 10px;
-//                 label{
-//                     cursor: pointer;
-//                     [type="checkbox"]{
-//                         display: none;
-//                     }
-//                     [type="checkbox"]+.item-text:before{
-//                         content: "\f096";
-//                         font-family: FontAwesome;
-//                         speak: none;
-//                         font-style: normal;
-//                         font-weight: normal;
-//                         text-transform: none;
-//                         line-height: 1;
-//                         -webkit-font-smoothing: antialiased;
-//                         width: 1em;
-//                         display: inline-block;
-//                         margin-right: 5px;
-//                         color: $dark-grey;
-//                     }
-//                     [type="checkbox"]:checked+.item-text:before{
-//                         content: "\f14a";
-//                         color: $dark-grey;
-//                         animation: tick 170ms ease-in;
-//                     }
-//                 }
-//             }
-//             input{
-//                 font-size: 1rem;
-//                 margin-top: 7px;
-//                 margin-bottom: 7px;
-//                 @include rounded(2px);
-//                 border: none;
-//                 background-color: lighten($lightest-grey,15%);
-//                 color: lighten($dark-grey,15%);
-//             }
-//             button{
-//                 @include rounded(5px);
-//                 width: 100px;
-//                 margin-top: 20px;
-//                 @include background-gradient($green,$skyblue);
-//                 border: none;
-//                 margin-left: 27%;
-//                 @media only screen and (min-width: $screen-mid){
-//                     margin-left: 50%;
-//                 }
-//             }
-//             .btn-link{
-//                 margin-top: 20px;
-//                 width: 100%;
-//                 color: $blue;
-//                 @media only screen and (min-width: $screen-mid){
-//                     width: 250px;
-//                 }
-//                 // text-align: center;
-//             }
-//         }
-//         width: 280px;
-//         background-color: $white;
-//         padding: 10px 5px;
-//         @media only screen and (min-width: $screen-mid){
-//             width: 400px;
-//             height: 400px;
-//         }
-//     }
-// }
-//
+.long{
+    margin-top: 50px;
+}
+.flex-middle-horizontal{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+			justify-content: center;
 
-
+}
+.flex-middle-vertical{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+}
 .middle{
     height: 75vh;
     display: -webkit-flex;
@@ -122,6 +24,14 @@
 			justify-content: center;
     -webkit-flex-direction: column;
 			flex-direction: column;
+
+    .full{
+        width: 450px;
+        // @media only screen and (min-width: $screen-xs){
+        //     width: 400px;
+        //     height: 450px;
+        // }
+    }
 
     .panel-default{
         height: 450px;
@@ -139,6 +49,7 @@
             text-align: center;
             padding-top: 30px;
             font-family: $arial;
+
             h3{
                 color: $darkest-grey;
                 font-size: 1.5rem;
@@ -153,10 +64,53 @@
                 letter-spacing: 1px;;
             }
         }
+        .admin-head{
+            background-color: $dark-blue;
+            padding-bottom: 5px;
+            h3{
+                color: $white;
+                font-size: 1.2rem;
+            }
+            p{
+                font-size: .8rem;
+            }
+        }
         .panel-body{
             margin-top: 60px;
 
             .panel-wrapper{
+
+                // profil pic
+                .fileContainer {
+        		    height: 110px;
+        		    width: 110px;
+        		    overflow: hidden;
+        		    position: relative;
+        		    text-align: center;
+        		}
+
+        		.fileContainer [type=file] {
+        		 display: none;
+        		}
+
+        		/* Example stylistic flourishes */
+
+        		.fileContainer {
+        		    background-image: url(../images/icons/propic.png);
+                    background-position: center;
+                    background-size: 110px;
+                    border: solid 3px $lightest-grey;
+        		    border-radius: 100%;
+        		    float: left;
+        		    padding: .5em;
+        		}
+
+        		.fileContainer [type=file] {
+        		    cursor: pointer;
+        		}
+                // profile pic end
+
+
                 padding: 0px 30px 0px 30px;
                 input{
                     font-size: 1rem;
@@ -167,6 +121,19 @@
                     border: none;
                     background-color: lighten($lightest-grey,15%);
                     color: lighten($dark-grey,15%);
+                }
+                textarea{
+                    font-size: 1rem;
+                    width: 100%;
+                    font-weight: normal;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    @include rounded(2px);
+                    border: none;
+                    background-color: lighten($lightest-grey,15%);
+                    color: lighten($dark-grey,15%);
+                    padding-left: 10px;
+                    resize: none;
                 }
                 .checkbox{
                     color: $darkest-grey;
@@ -201,6 +168,31 @@
                         }
                     }
                 }
+                .social-icons{
+                    margin-bottom: 20px;
+                    button{
+                        width: 32px;
+                        height: 32px;
+                        margin: 10px 4px 30px 4px;
+                        border: none;
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-color: $white;
+                        cursor: pointer;
+                    }
+                    button:nth-child(1){
+                        background-image: url("../images/icons/FACEBOOKblack.png");
+                    }
+                    button:nth-child(2){
+                        background-image: url("../images/icons/TWITTERblack.png");
+                    }
+                    button:nth-child(3){
+                        background-image: url("../images/icons/githubblack.png");
+                    }
+                    button:nth-child(4){
+                        background-image: url("../images/icons/behanceblack.png");
+                    }
+                }
                 .button{
                     display: -webkit-flex;
                     display: flex;
@@ -221,6 +213,12 @@
                     font-size: .9rem;
                 }
             }
+        }
+    }
+    .full{
+        // width: 450px;
+        @media only screen and (min-width: $screen-sm){
+            width: 450px;
         }
     }
 

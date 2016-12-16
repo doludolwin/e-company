@@ -14,4 +14,15 @@
 
 body{
 	background-image: url("../images/bg.png");
+
+	//////////////////////////////////////
+	//
+	//   	BOILERPLATE RULES
+	//
+	//////////////////////////////////////
+	.card{
+		background-color: $white;
+		margin: 10px -5px 10px -5px;
+		padding: 10px;
+	}
 }

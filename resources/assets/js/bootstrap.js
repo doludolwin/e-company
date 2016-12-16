@@ -1,3 +1,4 @@
+/* jshint esversion:6 */
 
 window._ = require('lodash');
 

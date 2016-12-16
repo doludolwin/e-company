@@ -65,6 +65,24 @@
   font-size: .9rem;
 }
 
+.long {
+  margin-top: 50px;
+}
+
+.flex-middle-horizontal {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.flex-middle-vertical {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
 .middle {
   height: 75vh;
   display: -webkit-box;
@@ -76,6 +94,10 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
+}
+
+.middle .full {
+  width: 450px;
 }
 
 .middle .panel-default {
@@ -115,12 +137,53 @@
   letter-spacing: 1px;
 }
 
+.middle .panel-default .admin-head {
+  background-color: #21252D;
+  padding-bottom: 5px;
+}
+
+.middle .panel-default .admin-head h3 {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+}
+
+.middle .panel-default .admin-head p {
+  font-size: .8rem;
+}
+
 .middle .panel-default .panel-body {
   margin-top: 60px;
 }
 
 .middle .panel-default .panel-body .panel-wrapper {
+  /* Example stylistic flourishes */
   padding: 0px 30px 0px 30px;
+}
+
+.middle .panel-default .panel-body .panel-wrapper .fileContainer {
+  height: 110px;
+  width: 110px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.middle .panel-default .panel-body .panel-wrapper .fileContainer [type=file] {
+  display: none;
+}
+
+.middle .panel-default .panel-body .panel-wrapper .fileContainer {
+  background-image: url(../images/icons/propic.png);
+  background-position: center;
+  background-size: 110px;
+  border: solid 3px #C5C6C7;
+  border-radius: 100%;
+  float: left;
+  padding: .5em;
+}
+
+.middle .panel-default .panel-body .panel-wrapper .fileContainer [type=file] {
+  cursor: pointer;
 }
 
 .middle .panel-default .panel-body .panel-wrapper input {
@@ -132,6 +195,20 @@
   border: none;
   background-color: #ececed;
   color: #898989;
+}
+
+.middle .panel-default .panel-body .panel-wrapper textarea {
+  font-size: 1rem;
+  width: 100%;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 2px;
+  border: none;
+  background-color: #ececed;
+  color: #898989;
+  padding-left: 10px;
+  resize: none;
 }
 
 .middle .panel-default .panel-body .panel-wrapper .checkbox {
@@ -173,6 +250,37 @@
   animation: tick 170ms ease-in;
 }
 
+.middle .panel-default .panel-body .panel-wrapper .social-icons {
+  margin-bottom: 20px;
+}
+
+.middle .panel-default .panel-body .panel-wrapper .social-icons button {
+  width: 32px;
+  height: 32px;
+  margin: 10px 4px 30px 4px;
+  border: none;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.middle .panel-default .panel-body .panel-wrapper .social-icons button:nth-child(1) {
+  background-image: url("../images/icons/FACEBOOKblack.png");
+}
+
+.middle .panel-default .panel-body .panel-wrapper .social-icons button:nth-child(2) {
+  background-image: url("../images/icons/TWITTERblack.png");
+}
+
+.middle .panel-default .panel-body .panel-wrapper .social-icons button:nth-child(3) {
+  background-image: url("../images/icons/githubblack.png");
+}
+
+.middle .panel-default .panel-body .panel-wrapper .social-icons button:nth-child(4) {
+  background-image: url("../images/icons/behanceblack.png");
+}
+
 .middle .panel-default .panel-body .panel-wrapper .button {
   display: -webkit-box;
   display: flex;
@@ -200,6 +308,12 @@
   margin-top: 20px;
   color: #3266AD;
   font-size: .9rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .middle .full {
+    width: 450px;
+  }
 }
 
 @-webkit-keyframes tick {
@@ -234,6 +348,12 @@
 
 body {
   background-image: url("../images/bg.png");
+}
+
+body .card {
+  background-color: #FFFFFF;
+  margin: 10px -5px 10px -5px;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=app.css.map */

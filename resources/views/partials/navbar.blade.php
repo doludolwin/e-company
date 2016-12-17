@@ -13,11 +13,11 @@
                   <li class="nav-item">
                       <span>
                       <!-- sign out make:auth -->
-                          <a class="nav-link" href="{{ url('/logout') }}"  onclick="event.preventDefault();
+                          <a class="nav-link white" href="{{ url('/logout') }}"  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit(); ">
                               <i class="fa fa-sign-out white" aria-hidden="true">
-                                Sign out  
-                              </i>                                                        
+                                <span style="font-family: arial;">Sign out</span>
+                              </i>
                           </a>
                       <!-- sign out make:aurh -->
                           <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

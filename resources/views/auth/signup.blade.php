@@ -26,7 +26,7 @@
                                         <img :src="image" v-bind:class="{ none:noImage }" height="200" width="200" alt="your image"  />
                                     </div>
                                     @if ($errors->has('email'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -40,7 +40,7 @@
                                     <input id="firstname" type="text" class="form-control" style="width: 49.2%; display: inline-block" placeholder="First name" name="name" value="{{ old('name') }}" required autofocus>
                                     <input id="secondname" type="text" class="form-control" style="width: 49.2%; display: inline-block" placeholder="Second name" name="name" value="{{ old('name') }}" required>
                                     @if ($errors->has('name'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('name') }}</strong>
                                         </span>
                                     @endif
@@ -54,7 +54,7 @@
                                     <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -68,7 +68,7 @@
                                     <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
 
                                     @if ($errors->has('password'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif
@@ -90,7 +90,7 @@
                                     <input id="bio" type="text" class="form-control" placeholder="Bio" name="email" value="{{ old('email') }}" required>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -104,7 +104,7 @@
                                     <textarea name="status" rows="3">Status</textarea>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif

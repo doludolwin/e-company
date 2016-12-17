@@ -22,6 +22,11 @@
 	@include background-gradient($green,$skyblue);
 }
 
+.warning-red{
+	font-size: .8rem;
+	color: $red;
+}
+
 body{
 	background-image: url("../images/bg.png");
 

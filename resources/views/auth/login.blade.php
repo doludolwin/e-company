@@ -23,7 +23,7 @@
                                     <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required autofocus>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -38,7 +38,7 @@
                                     <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
 
                                     @if ($errors->has('password'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif
@@ -47,7 +47,7 @@
 <!-- end of password field -->
 
 <!-- remember checkbox -->
-                            <div class="form-group" style="margin-bottom: 90px;">
+                            <div class="form-group" style="margin-bottom: 67px;">
                                 <div>
                                     <div class="checkbox">
                                         <label>

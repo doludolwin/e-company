@@ -386,6 +386,11 @@
   /* Standard syntax */
 }
 
+.warning-red {
+  font-size: .8rem;
+  color: #E84D3D;
+}
+
 body {
   background-image: url("../images/bg.png");
 }

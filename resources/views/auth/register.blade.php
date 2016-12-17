@@ -15,7 +15,7 @@
                     <h3>join us</h3>
                     <p>Good luck and have fun.</p>
                 </div>
-                <div class="panel-body">               
+                <div class="panel-body">
                     <form class="form-vertical" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
                         <div class="panel-wrapper">
@@ -25,7 +25,7 @@
                                     <input id="name" type="text" class="form-control" placeholder="Name" name="name" value="{{ old('name') }}" required autofocus>
 
                                     @if ($errors->has('name'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('name') }}</strong>
                                         </span>
                                     @endif
@@ -39,7 +39,7 @@
                                     <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -53,7 +53,7 @@
                                     <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
 
                                     @if ($errors->has('password'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif

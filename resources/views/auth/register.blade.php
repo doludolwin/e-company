@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('layouts.float')
+
 <div class="container">
     <div class="row middle">
         <div class="col-md-6 col-lg-4 col-sm-8 col-xs-12">
@@ -58,7 +60,7 @@
 
 <!-- confirm password field -->
                             <div class="form-group">
-                                <div>
+                                <div style="margin-bottom: 60px;">
                                     <input id="password-confirm" type="password" class="form-control"  placeholder="Confirm Password" name="password_confirmation" required>
                                 </div>
                             </div>

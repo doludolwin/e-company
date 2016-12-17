@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('layouts.float')
+
 <div class="container">
     <div class="row middle">
         <div class="col-md-6 col-lg-4 col-sm-8 col-xs-12">
@@ -45,7 +47,7 @@
 <!-- end of password field -->
 
 <!-- remember checkbox -->
-                            <div class="form-group">
+                            <div class="form-group" style="margin-bottom: 90px;">
                                 <div>
                                     <div class="checkbox">
                                         <label>
@@ -57,7 +59,7 @@
 <!-- end of remember checkbox -->
 
 <!-- log in button -->
-                            <div class="form-group">
+                            <div class="form-group" style="margin-bottom: .5rem;">
                                 <div class="button">
                                     <button type="submit" class="btn btn-primary">
                                         Login

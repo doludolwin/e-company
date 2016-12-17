@@ -12,6 +12,16 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 
+.float{
+	z-index: -1;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 55vh;
+	width: 100%;
+	@include background-gradient($green,$skyblue);
+}
+
 body{
 	background-image: url("../images/bg.png");
 

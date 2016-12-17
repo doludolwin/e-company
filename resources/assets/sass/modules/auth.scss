@@ -1,3 +1,7 @@
+.none{
+    display: none;
+}
+
 .long{
     margin-top: 50px;
 }
@@ -82,32 +86,49 @@
 
                 // profil pic
                 .fileContainer {
+                    position: relative;
         		    height: 110px;
         		    width: 110px;
         		    overflow: hidden;
         		    position: relative;
         		    text-align: center;
-        		}
-
-        		.fileContainer [type=file] {
-        		 display: none;
-        		}
-
-        		/* Example stylistic flourishes */
-
-        		.fileContainer {
-        		    background-image: url(../images/icons/propic.png);
+                    margin-bottom: 10px;
+                    background-image: url(../images/icons/propic.png);
                     background-position: center;
                     background-size: 110px;
                     border: solid 3px $lightest-grey;
         		    border-radius: 100%;
-        		    float: left;
         		    padding: .5em;
+
+                    label{
+                        position: relative;
+                        // top: 10px;
+                        // left: 10px;
+                        height: 35px;
+                        width: 35px;
+                        background-image: url("../images/icons/plus.png");
+                        opacity: .5;
+                        @include transition(opacity,.2s);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-color: none;
+                        cursor: pointer;
+                        margin-bottom: 0;
+                        z-index: 2;
+                        [type=file] {
+                            display: none;
+                        }
+                    }
+                    label:hover{
+                        opacity: 1;
+                    }
+                    img{
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                    }
         		}
 
-        		.fileContainer [type=file] {
-        		    cursor: pointer;
-        		}
                 // profile pic end
 
 
@@ -208,7 +229,7 @@
                 }
                 .forgot{
                     text-align: center;
-                    margin-top: 20px;
+                    margin-top: 0px;
                     color: $blue;
                     font-size: .9rem;
                 }

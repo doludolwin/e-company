@@ -15,11 +15,30 @@ require('./bootstrap');
 
 Vue.component('example', require('./components/Example.vue'));
 
-const app = new Vue({
+
+new Vue({
     el: '#panel',
-    methods:{
-        readURL(img){
-            // document.getElementById("container").style.backgroundImage = url(img.target.result);
+    data: {
+        image: '',
+        noImage: true
+    },
+    methods: {
+        readURL(e) {
+            let files = e.target.files || e.dataTransfer.files;
+            if (!files.length)
+                return;
+            this.showImage(files[0]);
+        },
+        showImage(file) {
+          // var image = new Image();
+            let reader = new FileReader();
+            let vm = this;
+
+            reader.onload = (e) => {
+                vm.image = e.target.result;
+                vm.noImage = false;
+            };
+            reader.readAsDataURL(file);
         }
     }
 });

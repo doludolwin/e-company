@@ -2,10 +2,12 @@
 
 @section('content')
 
+@include('layouts.float')
+
 <div class="container">
     <div class="row middle long">
         <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12">
-            <div class="panel panel-default full" style="height: 730px;">
+            <div class="panel panel-default full" style="height: 700px;">
                 <div class="panel-heading admin-head">
                     <h3>yes boss !!</h3>
                     <p>Ready for an adventure.</p>
@@ -17,11 +19,12 @@
 <!-- profile pic field  -->
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 flex-middle-horizontal">
-                                    <label class="fileContainer" id="container">
-                                	    <input type="file" v-on:change="readURL(this)" />
-                                	    {{-- <img id="blah" src="#" alt="your image" /> --}}
-                                	</label>
-
+                                    <div class="fileContainer flex-middle-vertical flex-middle-horizontal" id="container">
+                                        <label>
+                                    	    <input type="file" @change="readURL" />
+                                    	</label>
+                                        <img :src="image" v-bind:class="{ none:noImage }" height="200" width="200" alt="your image"  />
+                                    </div>
                                     @if ($errors->has('email'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('email') }}</strong>
@@ -110,19 +113,19 @@
 <!-- end of status field -->
 
 <!-- social icons -->
-                            <div class="social-icons flex-middle-horizontal">
+                            {{-- <div class="social-icons flex-middle-horizontal">
                                 <div class="social-wrapper">
                                     <button class="social" type="button" name="button"></button>
                                     <button class="social" type="button" name="button"></button>
                                     <button class="social" type="button" name="button"></button>
                                     <button class="social" type="button" name="button"></button>
                                 </div>
-                            </div>
+                            </div> --}}
 <!-- end of social icons -->
 
 <!-- log in button -->
                             <div class="form-group">
-                                <div class="button">
+                                <div class="button" style="margin-top: 50px;">
                                     <button type="submit" class="btn btn-primary">
                                         Sign up
                                     </button>

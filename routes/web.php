@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index');
 Route::get('/admin', function () {
     return view('auth.signup');
 });
+Route::get('/register/verify/{token}', 'Auth\RegisterController@verify'); 

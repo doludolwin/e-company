@@ -5,12 +5,15 @@
 <div class="container">
     <div class="row middle">
         <div class="col-md-6 col-lg-4 col-sm-8 col-xs-12">
+        @if (Session::has('message'))
+            <div class="alert alert-info">{{ Session::get('message') }}</div>
+        @endif
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3>join us</h3>
                     <p>Good luck and have fun.</p>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body">               
                     <form class="form-vertical" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
                         <div class="panel-wrapper">

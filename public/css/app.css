@@ -73,20 +73,6 @@
   margin-top: 50px;
 }
 
-.flex-middle-horizontal {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-}
-
-.flex-middle-vertical {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-}
-
 .middle {
   height: 75vh;
   display: -webkit-box;
@@ -273,37 +259,6 @@
   animation: tick 170ms ease-in;
 }
 
-.middle .panel-default .panel-body .panel-wrapper .social-icons {
-  margin-bottom: 20px;
-}
-
-.middle .panel-default .panel-body .panel-wrapper .social-icons button {
-  width: 32px;
-  height: 32px;
-  margin: 10px 4px 30px 4px;
-  border: none;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-color: #FFFFFF;
-  cursor: pointer;
-}
-
-.middle .panel-default .panel-body .panel-wrapper .social-icons button:nth-child(1) {
-  background-image: url("../images/icons/FACEBOOKblack.png");
-}
-
-.middle .panel-default .panel-body .panel-wrapper .social-icons button:nth-child(2) {
-  background-image: url("../images/icons/TWITTERblack.png");
-}
-
-.middle .panel-default .panel-body .panel-wrapper .social-icons button:nth-child(3) {
-  background-image: url("../images/icons/githubblack.png");
-}
-
-.middle .panel-default .panel-body .panel-wrapper .social-icons button:nth-child(4) {
-  background-image: url("../images/icons/behanceblack.png");
-}
-
 .middle .panel-default .panel-body .panel-wrapper .button {
   display: -webkit-box;
   display: flex;
@@ -369,6 +324,135 @@
   }
 }
 
+.footer-bot {
+  padding: 1rem;
+  text-align: center;
+  background-color: #21252D;
+}
+
+.footer-bot .footer-wrapper {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.footer-bot .footer-wrapper .footer-logo {
+  background-image: url("../images/icons/escores.png");
+  height: 50px;
+  width: 50px;
+  background-size: 100%;
+  margin-bottom: 15px;
+}
+
+.footer-bot .footer-wrapper .brand-name {
+  height: 20px;
+  width: 150px;
+  background-image: url("../images/icons/BRANDNAME.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.footer-bot .footer-wrapper .top-line {
+  margin-top: 15px;
+  height: 70px;
+  width: 2px;
+  background: #00AA58;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #00AA58, #00A6B9);
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #00AA58, #00A6B9);
+  /* Standard syntax */
+  border-radius: 2px;
+}
+
+.footer-bot .footer-wrapper .subscription-box p {
+  color: #FFFFFF;
+  font-size: .7rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.footer-bot .footer-wrapper .subscription-box .subsription {
+  height: 35px;
+  width: 250px;
+  border-radius: 35px;
+  background-color: #1c1f26;
+}
+
+.footer-bot .footer-wrapper .subscription-box .subsription input {
+  width: 210px;
+  height: 35px;
+  float: left;
+  padding-left: 15px;
+  color: #777777;
+  font-size: .8rem;
+  background-color: #1c1f26;
+  border: none;
+  border-radius: 35px;
+}
+
+.footer-bot .footer-wrapper .subscription-box .subsription input:focus {
+  outline: 0;
+}
+
+.footer-bot .footer-wrapper .subscription-box .subsription button {
+  padding-bottom: 4px;
+  font-size: 1rem;
+  color: #262626;
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  border: none;
+  margin: 4px;
+  float: right;
+  border-radius: 14.5px;
+  background: #00AA58;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #00AA58, #00A6B9);
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #00AA58, #00A6B9);
+  /* Standard syntax */
+}
+
+.footer-bot .footer-wrapper .bot-line {
+  margin-top: 15px;
+  height: 70px;
+  width: 2px;
+  background: #00AA58;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #00AA58, #00A6B9);
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #00AA58, #00A6B9);
+  /* Standard syntax */
+  border-radius: 2px;
+}
+
+.footer-bot .footer-wrapper .social-icons-bot {
+  margin-top: 10px;
+}
+
+.footer-bot .footer-wrapper .social-icons-bot .social-wrapper button {
+  background-color: #21252D;
+}
+
+.footer-bot .footer-wrapper .social-icons-bot p {
+  color: #848484;
+  font-size: .8rem;
+}
+
 .float {
   z-index: -1;
   position: absolute;
@@ -389,6 +473,56 @@
 .warning-red {
   font-size: .8rem;
   color: #E84D3D;
+}
+
+.flex-middle-horizontal {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.flex-middle-vertical {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.flex-order-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.social-icons {
+  margin-bottom: 5px;
+}
+
+.social-icons button {
+  width: 32px;
+  height: 32px;
+  margin: 10px 4px 0px 4px;
+  border: none;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.social-icons button:nth-child(1) {
+  background-image: url("../images/icons/FACEBOOKblack.png");
+}
+
+.social-icons button:nth-child(2) {
+  background-image: url("../images/icons/TWITTERblack.png");
+}
+
+.social-icons button:nth-child(3) {
+  background-image: url("../images/icons/githubblack.png");
+}
+
+.social-icons button:nth-child(4) {
+  background-image: url("../images/icons/behanceblack.png");
 }
 
 body {

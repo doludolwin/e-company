@@ -4,9 +4,9 @@
 
 @include('layouts.float')
 
-<div class="container">
+<div class="container" style="min-height: 750px;">
     <div class="row middle long">
-        <div class="col-md-8 col-lg-6 col-sm-8 col-xs-12">
+        <div class="col-md-8 col-lg-5 col-sm-8 col-xs-12">
             <div class="panel panel-default full" style="height: 700px;">
                 <div class="panel-heading admin-head">
                     <h3>yes boss !!</h3>
@@ -26,7 +26,7 @@
                                         <img :src="image" v-bind:class="{ none:noImage }" height="200" width="200" alt="your image"  />
                                     </div>
                                     @if ($errors->has('email'))
-                                        <span class="help-block warning-red">
+                                        <span class="help-block warning">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -40,7 +40,7 @@
                                     <input id="firstname" type="text" class="form-control" style="width: 49.2%; display: inline-block" placeholder="First name" name="name" value="{{ old('name') }}" required autofocus>
                                     <input id="secondname" type="text" class="form-control" style="width: 49.2%; display: inline-block" placeholder="Second name" name="name" value="{{ old('name') }}" required>
                                     @if ($errors->has('name'))
-                                        <span class="help-block warning-red">
+                                        <span class="help-block warning">
                                             <strong>{{ $errors->first('name') }}</strong>
                                         </span>
                                     @endif
@@ -54,7 +54,7 @@
                                     <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block warning-red">
+                                        <span class="help-block warning">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -68,7 +68,7 @@
                                     <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
 
                                     @if ($errors->has('password'))
-                                        <span class="help-block warning-red">
+                                        <span class="help-block warning">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif
@@ -90,7 +90,7 @@
                                     <input id="bio" type="text" class="form-control" placeholder="Bio" name="email" value="{{ old('email') }}" required>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block warning-red">
+                                        <span class="help-block warning">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -104,7 +104,7 @@
                                     <textarea name="status" rows="3">Status</textarea>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block warning-red">
+                                        <span class="help-block warning">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -140,5 +140,6 @@
         </div>
     </div>
 </div>
+
 
 @endsection

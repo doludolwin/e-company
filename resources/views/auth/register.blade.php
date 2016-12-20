@@ -4,7 +4,7 @@
 
 @include('layouts.float')
 
-<div class="container">
+<div class="container" style="min-height: 500px;">
     <div class="row middle">
         <div class="col-md-6 col-lg-4 col-sm-8 col-xs-12">
         @if (Session::has('message'))

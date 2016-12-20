@@ -15,8 +15,12 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        @include("partials.navbar")
-        @yield("content")
+        <div class="body-wrapper">
+
+            @include("partials.navbar")
+            @yield("content")
+            @include('partials.footer')
+        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" charset="utf-8"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js" charset="utf-8"></script>

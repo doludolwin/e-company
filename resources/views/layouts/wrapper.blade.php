@@ -23,7 +23,7 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js" charset="utf-8"></script>
         <script src="js/app.js" charset="utf-8"></script>
-        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" charset="utf-8"></script> --}}>
+        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" charset="utf-8"></script> --}}
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" charset="utf-8"></script>
         {{-- profile --}}
         {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script> --}}

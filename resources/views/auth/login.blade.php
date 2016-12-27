@@ -7,6 +7,9 @@
 <div class="container" style="min-height: 450px;">
     <div class="row middle">
         <div class="col-md-6 col-lg-4 col-sm-8 col-xs-12">
+        @if (Session::has('message'))
+            <div class="alert alert-info">{{ Session::get('message') }}</div>
+          @endif
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3>welcome back</h3>

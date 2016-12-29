@@ -20,6 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/register/verify/{token}', 'Auth\RegisterController@verify');
 // admin registration
-Route::get('/admin', 'Auth\RegisterController@signup'); 
-Route::post('/admin/register', 'Auth\RegisterController@register'); 
+Route::get('/admin', 'Auth\RegisterController@signup');
+Route::post('/admin/register', 'Auth\RegisterController@register');
 
+Route::get('/adminhome', function () {
+    return view('partials.admin-home');
+});

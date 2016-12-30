@@ -16,7 +16,7 @@ require('./bootstrap');
 Vue.component('example', require('./components/Example.vue'));
 
 
-new Vue({
+const app = new Vue({
     el: '#panel',
     data: {
         image: '',
@@ -36,6 +36,7 @@ new Vue({
 
             reader.onload = (e) => {
                 vm.image = e.target.result;
+                $( "#draggable" ).draggable();
                 vm.noImage = false;
             };
             reader.readAsDataURL(file);

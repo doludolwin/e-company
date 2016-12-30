@@ -15,7 +15,7 @@
                     <h3>join us</h3>
                     <p>Good luck and have fun.</p>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" style="margin-top: 40px;">
                     <form class="form-vertical" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
                         <div class="panel-wrapper">

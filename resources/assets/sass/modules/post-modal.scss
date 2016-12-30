@@ -51,7 +51,7 @@
                     background-color: #e8e8e8;
                     border: none;
                     font-family: $arial;
-                    font-size: .7rem;
+                    font-size: .9rem;
                 }
                 [type="text"]:focus{
                     outline: 0;
@@ -60,7 +60,7 @@
                     padding-left: 10px;
                     padding-top: 5px;
                     font-family: $arial;
-                    font-size: .7rem;
+                    font-size: .9rem;
                     width: 100%;
                     height: 160px;
                     resize: none;
@@ -69,6 +69,47 @@
                 }
                 textarea:focus{
                     outline: 0;
+                }
+            }
+            .image{
+                position: relative;
+                margin-top: 20px;
+                background-color: #f6f6f6;
+                width: 250px;
+                height: 120px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 25px;
+                h6{
+                    color: $darkest-grey;
+                    text-transform: uppercase;
+                    font-size: .8rem;
+                    padding-top: 4px;
+                }
+                label{
+                    position: absolute;
+                    top: 27.5px;
+                    left: 92.5px;
+                    cursor: pointer;
+                    height: 65px;
+                    width: 65px;
+                    border-radius: 65px;
+                    background-color: $dark-blue;
+                    [type="file"]{
+                        display: none;
+                    }
+                    i{
+                        font-size: 1.5rem;
+                        padding-top: 20px;
+                        @include color-gradient($green, $skyblue);
+                    }
+                }
+                button{
+                    @include background-gradient($green, $skyblue);
+                    background-size: 150px;
+                    position: absolute;
+                    bottom: -15px;
+                    left: 80px;
                 }
             }
         }

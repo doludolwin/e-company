@@ -26,7 +26,7 @@
                                         <label>
                                     	    <input type="file" name="avatar" @change="readURL">
                                     	</label>
-                                        <img :src="image" v-bind:class="{ none:noImage }" height="200" width="200" alt="your image"  />
+                                        <img :src="image" id="draggable" :class="{ none:noImage }" height="200" width="200" alt="your image"  />
                                     </div>
                                 </div>
                             </div>
@@ -126,6 +126,7 @@
         </div>
     </div>
 </div>
+<script>
 
 
 @endsection

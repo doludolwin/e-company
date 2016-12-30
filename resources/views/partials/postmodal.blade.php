@@ -19,7 +19,11 @@
               <textarea name="body" rows="5" cols="50" placeholder="Body content"></textarea>
             </div>
             <div class="image">
-                 <input type="file" name="image" value="">
+                <h6>uploaded</h6>
+                <label>
+                    <input type="file" name="image" value="">
+                    <i class="fa fa-camera" aria-hidden="true"></i>
+                </label>
                  <button type="button" name="button">post</button>
             </div>
         </form>

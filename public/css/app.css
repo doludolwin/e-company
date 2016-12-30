@@ -150,6 +150,10 @@
   padding: 0px 30px 0px 30px;
 }
 
+.middle .panel-default .panel-body .panel-wrapper .form-group {
+  margin: 5px;
+}
+
 .middle .panel-default .panel-body .panel-wrapper .fileContainer {
   position: relative;
   height: 110px;
@@ -616,7 +620,7 @@
   background-color: #e8e8e8;
   border: none;
   font-family: Arial;
-  font-size: .7rem;
+  font-size: .9rem;
 }
 
 .admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .post-form [type="text"]:focus {
@@ -627,7 +631,7 @@
   padding-left: 10px;
   padding-top: 5px;
   font-family: Arial;
-  font-size: .7rem;
+  font-size: .9rem;
   width: 100%;
   height: 160px;
   resize: none;
@@ -637,6 +641,69 @@
 
 .admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .post-form textarea:focus {
   outline: 0;
+}
+
+.admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image {
+  position: relative;
+  margin-top: 20px;
+  background-color: #f6f6f6;
+  width: 250px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image h6 {
+  color: #515151;
+  text-transform: uppercase;
+  font-size: .8rem;
+  padding-top: 4px;
+}
+
+.admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image label {
+  position: absolute;
+  top: 27.5px;
+  left: 92.5px;
+  cursor: pointer;
+  height: 65px;
+  width: 65px;
+  border-radius: 65px;
+  background-color: #21252D;
+}
+
+.admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image label [type="file"] {
+  display: none;
+}
+
+.admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image label i {
+  font-size: 1.5rem;
+  padding-top: 20px;
+  color: #00AA58;
+  /* For browsers that do not support gradients */
+  color: -webkit-linear-gradient(left, #00AA58, #00A6B9);
+  /* For Safari 5.1 to 6.0 */
+  color: -o-linear-gradient(right, #00AA58, #00A6B9);
+  /* For Opera 11.1 to 12.0 */
+  color: -moz-linear-gradient(right, #00AA58, #00A6B9);
+  /* For Firefox 3.6 to 15 */
+  color: linear-gradient(to right, #00AA58, #00A6B9);
+  /* Standard syntax */
+}
+
+.admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image button {
+  background: #00AA58;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #00AA58, #00A6B9);
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #00AA58, #00A6B9);
+  /* Standard syntax */
+  background-size: 150px;
+  position: absolute;
+  bottom: -15px;
+  left: 80px;
 }
 
 .float {

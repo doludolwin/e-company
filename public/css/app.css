@@ -845,17 +845,71 @@
 }
 
 .card .comments {
-  min-height: 50px;
-  background-color: #C5C6C7;
+  background-color: #EFEFEF;
 }
 
-.card .comments .ico {
+.card .comments .comment-wrapper {
+  padding: 20px;
+  padding-bottom: 10px;
+  min-height: 35px;
+}
+
+.card .comments .comment-wrapper .ico {
+  display: inline-block;
   height: 35px;
   width: 35px;
   border-radius: 25px;
   background-color: #21252D;
   color: #FFFFFF;
   text-align: center;
+}
+
+.card .comments .comment-wrapper .comment-input {
+  margin-left: 8px;
+  display: inline-block;
+  width: 80%;
+}
+
+.card .comments .comment-wrapper .comment-input textarea {
+  padding-left: 15px;
+  margin-bottom: -5px;
+  color: #515151;
+  width: 100%;
+  resize: none;
+  border: none;
+}
+
+.card .comments .comment-wrapper .comment-input textarea:focus {
+  outline: none;
+}
+
+.card .comments .comment-show {
+  padding: 20px;
+  padding-top: 5px;
+}
+
+.card .comments .comment-show .ico {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  border-radius: 25px;
+  background-color: #00A6B9;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.card .comments .comment-show .comment-text {
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #FFFFFF;
+  padding: 8px;
+  max-width: 80%;
+}
+
+.card .comments .comment-show .comment-text p {
+  line-height: 17px;
+  font-size: .9rem;
+  margin-bottom: 0px;
 }
 
 .float {

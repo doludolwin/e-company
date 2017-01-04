@@ -32,8 +32,21 @@
                 </div>
             </div>
             <div class="comments">
-                <div class="ico">
-                    <h3>S</h3>
+                <div class="comment-wrapper">
+                    <div class="ico">
+                        <h3>S</h3>
+                    </div>
+                    <div class="comment-input">
+                        <textarea name="comment" rows="1" cols="80" placeholder="Write a comment.."></textarea>
+                    </div>
+                </div>
+                <div class="comment-show">
+                    <div class="ico">
+                        <h3>J</h3>
+                    </div>
+                    <div class="comment-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                    </div>
                 </div>
             </div>
         </div>

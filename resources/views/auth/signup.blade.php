@@ -18,7 +18,7 @@
                 <div class="panel-body" style="margin-top: 0px;">
                     <form class="form-vertical" role="form" enctype="multipart/form-data" method="POST" action="{{ url('/admin/register') }}">
                         {{ csrf_field() }}
-                        <div class="panel-wrapper" id="panel">
+                        <div class="panel-wrapper">
 <!-- profile pic field  -->
                             <div class="form-group">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 flex-middle-horizontal">
@@ -126,7 +126,7 @@
         </div>
     </div>
 </div>
-<script>
+
 
 
 @endsection

@@ -644,6 +644,7 @@
 }
 
 .admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image {
+  border-radius: 0.5em;
   position: relative;
   margin-top: 20px;
   background-color: #f6f6f6;
@@ -651,7 +652,7 @@
   height: 120px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image h6 {
@@ -664,10 +665,10 @@
 .admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image label {
   position: absolute;
   top: 27.5px;
-  left: 92.5px;
+  left: 95.5px;
   cursor: pointer;
-  height: 65px;
-  width: 65px;
+  height: 55px;
+  width: 55px;
   border-radius: 65px;
   background-color: #21252D;
 }
@@ -677,8 +678,8 @@
 }
 
 .admin-header .header-wrapper .social-post .post-edit-buttons .post-modal .modal-content .modal-body .image label i {
-  font-size: 1.5rem;
-  padding-top: 20px;
+  font-size: 1.3rem;
+  padding-top: 18px;
   color: #00AA58;
   /* For browsers that do not support gradients */
   color: -webkit-linear-gradient(left, #00AA58, #00A6B9);
@@ -704,6 +705,157 @@
   position: absolute;
   bottom: -15px;
   left: 80px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  margin: 10px auto 20px auto;
+  max-width: 350px;
+  border-radius: 4px;
+}
+
+.card .card-header {
+  background-color: #FFFFFF;
+  padding: 25px 20px 15px 20px;
+  border-bottom: solid 0.2px #dfe0e0;
+}
+
+.card .card-header .card-profile-pic {
+  position: relative;
+  height: 55px;
+  width: 55px;
+  background-image: url(../images/icons/propic.png);
+  background-size: 100%;
+  border-radius: 55px;
+}
+
+.card .card-header .card-profile-pic .card-name {
+  width: 150px;
+  position: absolute;
+  top: 12px;
+  left: 65px;
+  color: #636363;
+}
+
+.card .card-header .card-profile-pic .card-name h4 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.card .card-header .card-profile-pic .card-name p {
+  font-size: .7rem;
+}
+
+.card .card-body {
+  padding: 25px 15px 0px 15px;
+}
+
+.card .card-body h1 {
+  font-family: Arial;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #515151;
+}
+
+.card .card-body p {
+  font-size: .9rem;
+  color: #636363;
+  line-height: 19px;
+  margin: 0;
+}
+
+.card .card-image {
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.card .card-social {
+  padding: 10px 0px 10px 20px;
+  margin-bottom: 15px;
+  height: 50px;
+}
+
+.card .card-social .share {
+  display: inline-block;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  background-image: url(../images/icons/SHARE.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: background-image .2s ease-in;
+  transition: background-image .2s ease-in;
+}
+
+.card .card-social .share:hover {
+  background-image: url(../images/icons/SHARE-HOVER.png);
+}
+
+.card .card-social .social-share {
+  display: inline;
+  margin-left: 5px;
+}
+
+.card .card-social .social-share button {
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 0px 5px 0px 0px;
+  padding: 0;
+}
+
+.card .card-social .social-share button:focus {
+  outline: 0;
+}
+
+.card .card-social .social-share button:nth-child(1) {
+  background-image: url(../images/icons/FACEBOOK.png);
+  background-size: 99%;
+}
+
+.card .card-social .social-share button:nth-child(2) {
+  background-image: url(../images/icons/TWITTER.png);
+  background-size: 99%;
+}
+
+.card .card-social .social-share button:nth-child(3) {
+  background-image: url(../images/icons/GOOGLE.png);
+  background-size: 99%;
+}
+
+.card .card-social .comment-button {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-image: url(../images/icons/COMMENT.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  cursor: pointer;
+  -webkit-transition: background-image .2s ease-in;
+  transition: background-image .2s ease-in;
+}
+
+.card .card-social .comment-button:hover {
+  background-image: url(../images/icons/COMMENT-HOVER.png);
+}
+
+.card .comments {
+  min-height: 50px;
+  background-color: #C5C6C7;
+}
+
+.card .comments .ico {
+  height: 35px;
+  width: 35px;
+  border-radius: 25px;
+  background-color: #21252D;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 .float {
@@ -780,12 +932,6 @@
 
 body {
   background-image: url("../images/bg.png");
-}
-
-body .card {
-  background-color: #FFFFFF;
-  margin: 10px -5px 10px -5px;
-  padding: 10px;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <div class="body-wrapper">
+        <div class="body-wrapper" id="panel">
 
             @include("partials.navbar")
             @yield("content")

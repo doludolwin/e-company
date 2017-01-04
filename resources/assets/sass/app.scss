@@ -9,6 +9,7 @@
 @import "./modules/auth.scss";
 @import "./modules/footer.scss";
 @import "./modules/admin.scss";
+@import "./modules/card.scss";
 
 // Bootstrap
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -85,9 +86,5 @@ body{
 	//   	BOILERPLATE RULES
 	//
 	//////////////////////////////////////
-	.card{
-		background-color: $white;
-		margin: 10px -5px 10px -5px;
-		padding: 10px;
-	}
+
 }

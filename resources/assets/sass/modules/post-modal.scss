@@ -72,6 +72,7 @@
                 }
             }
             .image{
+                @include rounded();
                 position: relative;
                 margin-top: 20px;
                 background-color: #f6f6f6;
@@ -79,7 +80,7 @@
                 height: 120px;
                 margin-left: auto;
                 margin-right: auto;
-                margin-bottom: 25px;
+                margin-bottom: 20px;
                 h6{
                     color: $darkest-grey;
                     text-transform: uppercase;
@@ -89,18 +90,18 @@
                 label{
                     position: absolute;
                     top: 27.5px;
-                    left: 92.5px;
+                    left: 95.5px;
                     cursor: pointer;
-                    height: 65px;
-                    width: 65px;
+                    height: 55px;
+                    width: 55px;
                     border-radius: 65px;
                     background-color: $dark-blue;
                     [type="file"]{
                         display: none;
                     }
                     i{
-                        font-size: 1.5rem;
-                        padding-top: 20px;
+                        font-size: 1.3rem;
+                        padding-top: 18px;
                         @include color-gradient($green, $skyblue);
                     }
                 }

@@ -5,39 +5,39 @@
             <div class="card-header">
                     <div class="card-profile-pic">
                         <div class="card-name">
-                            <h4>Jiran kurian</h4>
-                            <p>Nov15,2015</p>
+                            <h4><slot name="admin-name"></slot></h4>
+                            <p><slot name="post-date"></slot></p>
                         </div>
                     </div>
             </div>
             <!-- end-of-header -->
             <div class="card-body">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-                 <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullam.<p>
+                <h1><slot name="post-header"></slot></h1>
+                 <p><slot name="post-body"></slot><p>
             </div>
             <div class="card-image">
                 <img src="images/images/sample.png" alt="" height="390px" width="350px">
             </div>
             <div class="card-social">
-                <div class="share">
+                <div class="share" @click="buttonShow">
 
                 </div>
                 <div class="social-share">
-                    <button type="button" name="button"></button>
-                    <button type="button" name="button"></button>
-                    <button type="button" name="button"></button>
+                    <button :style="{ left: Styles.shareStylefb + 'px' }" type="button" name="button"></button>
+                    <button :style="{ left: Styles.shareStyletw + 'px' }" type="button" name="button"></button>
+                    <button :style="{ left: Styles.shareStylegp + 'px' }" type="button" name="button"></button>
                 </div>
-                <div class="comment-button">
+                <div class="comment-button" :style="{ left: Styles.commentStyle + 'px' }" @click="toggleComment">
 
                 </div>
             </div>
-            <div class="comments">
+            <div id="comments" class="comments">
                 <div class="comment-wrapper">
                     <div class="ico">
                         <h3>S</h3>
                     </div>
-                    <div class="comment-input">
-                        <textarea name="comment" rows="1" cols="80" placeholder="Write a comment.."></textarea>
+                    <div class="comment-input" @click="init">
+                        <textarea id="text" name="comment" rows="1" cols="80" placeholder="Write a comment.."></textarea>
                     </div>
                 </div>
                 <div class="comment-show">
@@ -56,17 +56,75 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+
         },
         data() {
             return{
-                hoverStatus: false
+                Styles: {
+                    buttonStatus: false,
+                    commentStyle: 50,
+                    shareStylefb: 5,
+                    shareStyletw: 5,
+                    shareStylegp: 5
+                }
             }
         },
         methods: {
-            shareHover(){
-                this.hoverStatus = true;
+            buttonShow(){
+                if (!this.Styles.buttonStatus) {
+                    this.Styles.buttonStatus = true;
+                    this.Styles.commentStyle = 165;
+                    this.Styles.shareStyletw = 40;
+                    this.Styles.shareStylegp = 75;
+                }
+                else{
+                    this.Styles.buttonStatus = false;
+                    this.Styles.commentStyle = 50;
+                    this.Styles.shareStyletw = 5;
+                    this.Styles.shareStylegp = 5;
+                }
+            },
+            // comment section toogle function
+            toggleComment(){
+              $( "#comments" ).slideToggle();
+            },
+
+            observe(element, event, handler){
+                if (window.attachEvent) {
+                    element.attachEvent('on'+event, handler);
+                }
+                else {
+                    element.addEventListener(event, handler, false);
+                }
+            },
+            init(){
+                var text = document.getElementById('text');
+                function resize () {
+                   text.style.height = 'auto';
+                   text.style.height = text.scrollHeight+'px';
+                }
+                /* 0-timeout to get the already changed text */
+                function delayedResize () {
+                   window.setTimeout(resize, 0);
+                }
+                observe(text, 'change',  resize);
+                observe(text, 'cut',     delayedResize);
+                observe(text, 'paste',   delayedResize);
+                observe(text, 'drop',    delayedResize);
+                observe(text, 'keydown', delayedResize);
+                function observe(element, event, handler){
+                    if (window.attachEvent) {
+                        element.attachEvent('on'+event, handler);
+                    }
+                    else {
+                        element.addEventListener(event, handler, false);
+                    }
+                }
+                text.focus();
+                text.select();
+                resize();
             }
+
         }
     }
 </script>

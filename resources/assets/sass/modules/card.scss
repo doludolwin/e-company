@@ -69,13 +69,16 @@
                 background-image: url(../images/icons/SHARE-HOVER.png);
         }
         .social-share{
+            position: relative;
             display: inline;
             margin-left: 5px;
+            overflow: hidden;
             button{
+                // display: none;
                 height: 30px;
                 width: 30px;
                 border: none;
-                background-color: $white;
+                background-color: transparent;
                 background-repeat: no-repeat;
                 cursor: pointer;
                 margin: 0px 5px 0px 0px;
@@ -85,28 +88,35 @@
                 outline: 0;
             }
             button:nth-child(1){
+                position: absolute;
                 background-image: url(../images/icons/FACEBOOK.png);
                 background-size: 99%;
             }
             button:nth-child(2){
+                position: absolute;
                 background-image: url(../images/icons/TWITTER.png);
                 background-size: 99%;
+                transition: all .3s linear;
             }
             button:nth-child(3){
+                position: absolute;
                 background-image: url(../images/icons/GOOGLE.png);
                 background-size: 99%;
+                transition: all .3s linear;
             }
         }
         .comment-button{
             display: inline-block;
+            position: absolute;
+            transition: all .3s linear;
             height: 30px;
             width: 30px;
+            background-color: $white;
             background-image: url(../images/icons/COMMENT.png);
             background-size: 100%;
             background-repeat: no-repeat;
             margin-left: 10px;
             cursor: pointer;
-            transition: background-image .2s ease-in;
         }
         .comment-button:hover{
             background-image: url(../images/icons/COMMENT-HOVER.png);
@@ -114,6 +124,7 @@
     }
     .comments{
         // min-height: 50px;
+        display: none;
         background-color: $comment-grey;
         .comment-wrapper{
             padding: 20px;

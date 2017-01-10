@@ -11,7 +11,9 @@ window._ = require('lodash');
 window.$ = window.jQuery = require('jquery');
 // disabled for using bootstrap 4 beta version
 // require('bootstrap-sass');
-// require('bootstrap');
+// require('tether');
+require('bootstrap');
+
 
 
 /**

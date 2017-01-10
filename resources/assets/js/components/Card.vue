@@ -23,7 +23,9 @@
 
                 </div>
                 <div class="social-share">
-                    <button :style="{ left: Styles.shareStylefb + 'px' }" type="button" name="button"></button>
+                    <a href="https://www.facebook.com/sharer.php?u=https://www.behance.net/sannssunny5f13">
+                        <button :style="{ left: Styles.shareStylefb + 'px' }" type="button" name="button"></button>
+                    </a>
                     <button :style="{ left: Styles.shareStyletw + 'px' }" type="button" name="button"></button>
                     <button :style="{ left: Styles.shareStylegp + 'px' }" type="button" name="button"></button>
                 </div>
@@ -89,14 +91,6 @@
               $( "#comments" ).slideToggle();
             },
 
-            observe(element, event, handler){
-                if (window.attachEvent) {
-                    element.attachEvent('on'+event, handler);
-                }
-                else {
-                    element.addEventListener(event, handler, false);
-                }
-            },
             init(){
                 var text = document.getElementById('text');
                 function resize () {

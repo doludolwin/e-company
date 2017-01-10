@@ -6,7 +6,7 @@
         <div class="row" style="margin-top: 40px;">
             <card>
                 <template slot="admin-name">
-                    Sam thomas
+                    Dolwin davis
                 </template>
                 <template slot="post-date">
                     Nov15,2015

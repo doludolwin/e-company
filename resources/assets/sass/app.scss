@@ -38,6 +38,7 @@
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
+    -moz-justify-content: center;
 			justify-content: center;
 
 }
@@ -45,10 +46,12 @@
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
+     -moz-align-items: center;
             align-items: center;
 }
 .flex-order-column{
 	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
 			flex-direction: column;
 }
 

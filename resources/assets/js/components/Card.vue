@@ -4,10 +4,11 @@
             <!-- card-header -->
             <div class="card-header">
                     <div class="card-profile-pic">
-                        <div class="card-name">
-                            <h4><slot name="admin-name"></slot></h4>
-                            <p><slot name="post-date"></slot></p>
-                        </div>
+                    <img :src="dplink" alt="" height="55px" width="55px">
+                    </div>
+                    <div class="card-name">
+                        <h4><slot name="admin-name"></slot></h4>
+                        <p><slot name="post-date"></slot></p>
                     </div>
             </div>
             <!-- end-of-header -->
@@ -16,7 +17,7 @@
                  <p><slot name="post-body"></slot><p>
             </div>
             <div class="card-image">
-                <img src="images/images/sample.png" alt="" height="390px" width="350px">
+                <img :src="image" alt="" width="350">
             </div>
             <div class="card-social">
                 <div class="share" @click="buttonShow">
@@ -47,7 +48,7 @@
                         <h3>J</h3>
                     </div>
                     <div class="comment-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius autlitia laudantium quos.</p>
                     </div>
                 </div>
             </div>
@@ -71,6 +72,7 @@
                 }
             }
         },
+        props:['dplink','image'],
         methods: {
             buttonShow(){
                 if (!this.Styles.buttonStatus) {

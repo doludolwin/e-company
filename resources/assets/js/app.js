@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('./croppie.js');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -43,3 +44,44 @@ const app = new Vue({
         }
     }
 });
+
+$( document ).ready(function() {
+            var $uploadCrop;
+
+            function readFile(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();          
+                    reader.onload = function (e) {
+                        $uploadCrop.croppie('bind', {
+                            url: e.target.result
+                        });
+                        $('.upload-demo').addClass('ready');
+                    }           
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $uploadCrop = $('#upload-demo').croppie({
+                viewport: {
+                    width: 130,
+                    height: 130,
+                    type: 'circle'
+                },
+                boundary: {
+                    width: 130,
+                    height: 130
+                },
+                showZoomer: true
+            });
+
+            $('#upload').on('change', function () { readFile(this); });
+            $('.upload-result').on('click', function (ev) {
+                $uploadCrop.croppie('result', {
+                    type: 'canvas',
+                    size: 'original'
+                }).then(function (resp) {
+                    $('#imagebase64').val(resp);
+                    $('#form').submit();
+                });
+            });
+
+        });

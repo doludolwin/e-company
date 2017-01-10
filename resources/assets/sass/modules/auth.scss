@@ -1,3 +1,4 @@
+
 .none{
     display: none;
 }
@@ -74,51 +75,45 @@
                     margin: 5px;
                 }
                 // profil pic
-                .fileContainer {
-                    position: relative;
-        		    height: 110px;
-        		    width: 110px;
-        		    overflow: hidden;
-        		    position: relative;
-        		    text-align: center;
-                    margin-bottom: 10px;
-                    background-image: url(../images/icons/propic.png);
-                    background-position: center;
-                    background-size: 110px;
-                    border: solid 3px $lightest-grey;
-        		    border-radius: 100%;
-        		    padding: .5em;
-
-                    label{
-                        position: relative;
-                        // top: 10px;
-                        // left: 10px;
-                        height: 35px;
-                        width: 35px;
-                        background-image: url("../images/icons/plus.png");
-                        opacity: .5;
-                        @include transition(opacity,.2s);
-                        background-size: 100%;
-                        background-repeat: no-repeat;
-                        background-color: none;
-                        cursor: pointer;
-                        margin-bottom: 0;
-                        z-index: 2;
-                        [type=file] {
-                            display: none;
-                        }
+                label{
+                    position: absolute;
+                    top: 63px;
+                    // left: 0px;
+                    height: 35px;
+                    width: 35px;
+                    background-image: url("../images/icons/plus.png");
+                    opacity: .5;
+                    @include transition(opacity,.2s);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-color: none;
+                    cursor: pointer;
+                    margin-bottom: 0;
+                    z-index: 2;
+                    [type=file] {
+                        display: none;
                     }
-                    label:hover{
-                        opacity: 1;
+                }
+                label:hover{
+                    opacity: 1;
+                }
+                #upload-demo{
+                    margin-top: 25px;
+                    .cr-boundary{
+                        background-image: url(../images/icons/propic.png);
+                        background-position: center;
+                        background-size: 130px;
+                        border-radius: 50%;
                     }
-                    img{
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
+                    .cr-viewport{
+                        border: solid 3px $lightest-grey;
                     }
-        		}
-
-                // profile pic end
+                    .cr-slider-wrap{
+                        margin-top: 5px;
+                        margin-bottom: 3px;
+                    }
+                }
+                 // profile pic end
 
 
                 padding: 0px 30px 0px 30px;

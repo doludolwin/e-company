@@ -8,14 +8,16 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <div class="pro-pic">
-            <img src="images/icons/propic.png" alt="" height="35px" width="35px">
+            <img src="/uploads/avatars/{{ $admin->avatar }}" alt="{{ $admin->avatar }}" height="35px" width="35px">
         </div>
-        <h6>Sam</h6>
+        <h6>{{ $user->name }}</h6>
       </div>
       <div class="modal-body">
-        <form class="" method="post">
+        <form class="" method="post" action="/admin/blogpost" enctype="multipart/form-data" >
+        {{ csrf_field() }}
             <div class="post-form">
               <input type="text" name="title" value="" placeholder="Title">
+              <input type="hidden" name="published_at" value="{{ Carbon\Carbon::now() }}">
               <textarea name="body" rows="5" cols="50" placeholder="Body content"></textarea>
             </div>
             <div class="image">
@@ -24,7 +26,7 @@
                     <input type="file" name="image" value="">
                     <i class="fa fa-camera" aria-hidden="true"></i>
                 </label>
-                 <button type="button" name="button">post</button>
+                 <button type="submit" name="button">post</button>
             </div>
         </form>
       </div>

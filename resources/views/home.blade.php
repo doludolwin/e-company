@@ -4,20 +4,22 @@
 <div id="panel">
     <div class="container">
         <div class="row" style="margin-top: 40px;">
+        @foreach($post as $post)
             <card>
                 <template slot="admin-name">
-                    Sam thomas
+                     {{ $post->name }}
                 </template>
                 <template slot="post-date">
-                    Nov15,2015
+                    {{ $post->published_at }}
                 </template>
                 <template slot="post-header">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    {{ $post->title }}
                 </template>
-                <template slot="post-body">
-                    ercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               <template slot="post-body">
+                    {{ $post->body }}
                 </template>
             </card>
+        @endforeach
 
         </div>
     </div>

@@ -7,9 +7,16 @@
 @import "mixins";
 @import "./modules/navbar.scss";
 @import "./modules/auth.scss";
+@import "./modules/footer.scss";
+@import "./modules/admin.scss";
+@import "./modules/card.scss";
+
+// plugins
+@import "./croppie.css";
 
 // Bootstrap
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "node_modules/bootstrap/scss/bootstrap";
 
 
 .float{
@@ -22,7 +29,62 @@
 	@include background-gradient($green,$skyblue);
 }
 
+.warning-red{
+	font-size: .8rem;
+	color: $red;
+}
+
+.flex-middle-horizontal{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+			justify-content: center;
+
+}
+.flex-middle-vertical{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+     -moz-align-items: center;
+            align-items: center;
+}
+.flex-order-column{
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+			flex-direction: column;
+}
+
+.social-icons{
+	margin-bottom: 5px;
+	button{
+		width: 32px;
+		height: 32px;
+		margin: 10px 4px 0px 4px;
+		border: none;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+	button:nth-child(1){
+		background-image: url("../images/icons/FACEBOOKblack.png");
+	}
+	button:nth-child(2){
+		background-image: url("../images/icons/TWITTERblack.png");
+	}
+	button:nth-child(3){
+		background-image: url("../images/icons/githubblack.png");
+	}
+	button:nth-child(4){
+		background-image: url("../images/icons/behanceblack.png");
+	}
+}
+
 body{
+
+	.body-wrapper{
+
+	}
 	background-image: url("../images/bg.png");
 
 	//////////////////////////////////////
@@ -30,9 +92,5 @@ body{
 	//   	BOILERPLATE RULES
 	//
 	//////////////////////////////////////
-	.card{
-		background-color: $white;
-		margin: 10px -5px 10px -5px;
-		padding: 10px;
-	}
+
 }

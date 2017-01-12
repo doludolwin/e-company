@@ -1,0 +1,99 @@
+.footer-bot{
+
+    padding: 1rem;
+    text-align: center;
+    background-color: $dark-blue;
+    .footer-wrapper{
+        margin-top: 25px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+    			align-items: center;
+        -webkit-justify-content: center;
+    			justify-content: center;
+        -webkit-flex-direction: column;
+    			flex-direction: column;
+
+        .footer-logo{
+            background-image: url("../images/icons/escores.png");
+            height: 50px;
+            width: 50px;
+            background-size: 100%;
+            margin-bottom: 15px;
+        }
+        .brand-name{
+            height: 20px;
+            width: 150px;
+            background-image: url("../images/icons/BRANDNAME.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .top-line{
+            margin-top: 15px;
+            height: 70px;
+            width: 2px;
+            @include background-gradient($green,$skyblue);
+            @include rounded(2px);
+        }
+        .subscription-box{
+            p{
+                color: $white;
+                font-size: .7rem;
+                margin-top: 10px;
+                text-transform: uppercase;
+            }
+            .subsription{
+                height: 35px;
+                width: 250px;
+                @include rounded(35px);
+                background-color: darken($dark-blue, 2.5%);
+                input{
+                    width: 210px;
+                    height: 35px;
+                    float: left;
+                    padding-left: 15px;
+                    color: darken($light-grey,5%);
+                    font-size: .8rem;
+                    background-color: darken($dark-blue, 2.5%);
+                    border: none;
+                    @include rounded(35px);
+                }
+                input:focus{
+                    outline: 0;
+                }
+                button{
+                    padding-bottom: 4px;
+                    font-size: 1rem;
+                    color: lighten(black, 15%);
+                    cursor: pointer;
+                    height: 27px;
+                    width: 27px;
+                    border: none;
+                    margin: 4px;
+                    float: right;
+                    @include rounded(14.5px);
+                    @include background-gradient($green, $skyblue);
+                }
+            }
+        }
+        .bot-line{
+            margin-top: 15px;
+            height: 70px;
+            width: 2px;
+            @include background-gradient($green,$skyblue);
+            @include rounded(2px);
+        }
+        .social-icons-bot{
+            margin-top: 10px;
+            .social-wrapper{
+                button{
+                    background-color: $dark-blue;
+                }
+            }
+            p{
+                color: $light-grey;
+                font-size: .8rem;
+            }
+        }
+    }
+}

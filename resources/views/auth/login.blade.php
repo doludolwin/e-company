@@ -4,9 +4,12 @@
 
 @include('layouts.float')
 
-<div class="container">
+<div class="container" style="min-height: 450px; margin-top: 25px; margin-bottom: 30px;">
     <div class="row middle">
         <div class="col-md-6 col-lg-4 col-sm-8 col-xs-12">
+        @if (Session::has('message'))
+            <div class="alert alert-info">{{ Session::get('message') }}</div>
+          @endif
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3>welcome back</h3>
@@ -23,7 +26,7 @@
                                     <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required autofocus>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -38,7 +41,7 @@
                                     <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
 
                                     @if ($errors->has('password'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif
@@ -47,7 +50,7 @@
 <!-- end of password field -->
 
 <!-- remember checkbox -->
-                            <div class="form-group" style="margin-bottom: 90px;">
+                            <div class="form-group" style="margin-bottom: 67px;">
                                 <div>
                                     <div class="checkbox">
                                         <label>

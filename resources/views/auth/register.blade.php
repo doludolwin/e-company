@@ -4,15 +4,18 @@
 
 @include('layouts.float')
 
-<div class="container">
+<div class="container" style="min-height: 500px; margin-top: 30px;">
     <div class="row middle">
         <div class="col-md-6 col-lg-4 col-sm-8 col-xs-12">
+        @if (Session::has('message'))
+            <div class="alert alert-info">{{ Session::get('message') }}</div>
+        @endif
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3>join us</h3>
                     <p>Good luck and have fun.</p>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" style="margin-top: 40px;">
                     <form class="form-vertical" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
                         <div class="panel-wrapper">
@@ -22,7 +25,7 @@
                                     <input id="name" type="text" class="form-control" placeholder="Name" name="name" value="{{ old('name') }}" required autofocus>
 
                                     @if ($errors->has('name'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('name') }}</strong>
                                         </span>
                                     @endif
@@ -36,7 +39,7 @@
                                     <input id="email" type="email" class="form-control" placeholder="E-Mail Address" name="email" value="{{ old('email') }}" required>
 
                                     @if ($errors->has('email'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('email') }}</strong>
                                         </span>
                                     @endif
@@ -50,7 +53,7 @@
                                     <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
 
                                     @if ($errors->has('password'))
-                                        <span class="help-block">
+                                        <span class="help-block warning-red">
                                             <strong>{{ $errors->first('password') }}</strong>
                                         </span>
                                     @endif

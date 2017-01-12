@@ -12,10 +12,17 @@
                   @if (Auth::check())
                   <li class="nav-item">
                       <span>
-                          <a class="nav-link" href="{{ url('/home') }}">
-                              <i class="fa fa-sign-out white" aria-hidden="true"></i>
-                              Sign out
+                      <!-- sign out make:auth -->
+                          <a class="nav-link white" href="{{ url('/logout') }}"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit(); ">
+                              <i class="fa fa-sign-out white" aria-hidden="true">
+                                <span style="font-family: arial;">Sign out</span>
+                              </i>
                           </a>
+                      <!-- sign out make:aurh -->
+                          <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                          </form>
                       </span>
                   </li>
                   @else

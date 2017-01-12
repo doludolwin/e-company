@@ -1,0 +1,186 @@
+.card{
+    background-color: $white;
+    margin: 10px auto 20px auto;
+    max-width: 350px;
+    @include rounded(4px);
+    .card-header{
+        background-color: $white;
+        padding: 25px 20px 15px 20px;;
+        border-bottom: solid .2px lighten($lightest-grey, 10%);
+
+        .card-profile-pic{
+            position: relative;
+            height: 55px;
+            width: 55px;
+            background-image: url(../images/icons/propic.png);
+            background-size: 100%;
+            border-radius: 55px;
+            overflow: hidden;
+        }
+        .card-name{
+            width: 150px;
+            position: absolute;
+            top: 33px;
+            left: 85px;
+            color: $dark-grey;
+            h4{
+                font-size: 1.2rem;
+                margin: 0;
+            }
+            p{
+                font-size: .7rem;
+            }
+        }
+    }
+    .card-body{
+        padding: 25px 15px 0px 15px;
+        h1{
+            font-family: Arial;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: $darkest-grey;
+        }
+        p{
+            font-size: .9rem;
+            color: $dark-grey;
+            line-height: 19px;
+            margin: 0;
+        }
+    }
+    .card-image{
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+    .card-social{
+        padding: 10px 0px 10px 20px;
+        margin-bottom: 15px;
+        height: 50px;
+        .share{
+            display: inline-block;
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            background-image: url(../images/icons/SHARE.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transition: background-image .2s ease-in;
+        }
+        .share:hover{
+                background-image: url(../images/icons/SHARE-HOVER.png);
+        }
+        .social-share{
+            position: relative;
+            display: inline;
+            margin-left: 5px;
+            overflow: hidden;
+            button{
+                // display: none;
+                height: 30px;
+                width: 30px;
+                border: none;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                margin: 0px 5px 0px 0px;
+                padding: 0;
+            }
+            button:focus{
+                outline: 0;
+            }
+            button:nth-child(1){
+                position: absolute;
+                background-image: url(../images/icons/FACEBOOK.png);
+                background-size: 99%;
+            }
+            button:nth-child(2){
+                position: absolute;
+                background-image: url(../images/icons/TWITTER.png);
+                background-size: 99%;
+                transition: all .3s linear;
+            }
+            button:nth-child(3){
+                position: absolute;
+                background-image: url(../images/icons/GOOGLE.png);
+                background-size: 99%;
+                transition: all .3s linear;
+            }
+        }
+        .comment-button{
+            display: inline-block;
+            position: absolute;
+            transition: all .3s linear;
+            height: 30px;
+            width: 30px;
+            background-color: $white;
+            background-image: url(../images/icons/COMMENT.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .comment-button:hover{
+            background-image: url(../images/icons/COMMENT-HOVER.png);
+        }
+    }
+    .comments{
+        // min-height: 50px;
+        display: none;
+        background-color: $comment-grey;
+        .comment-wrapper{
+            padding: 20px;
+            padding-bottom: 10px;
+            min-height: 35px;
+            .ico{
+                display: inline-block;
+                height: 35px;
+                width: 35px;
+                border-radius: 25px;
+                background-color: $dark-blue;
+                color: $white;
+                text-align: center;
+            }
+            .comment-input{
+                margin-left: 8px;
+                display: inline-block;
+                width: 80%;
+                textarea{
+                    padding-left: 15px;
+                    margin-bottom: -5px;
+                    color: $darkest-grey;
+                    width: 100%;
+                    resize: none;
+                    border: none;
+                }
+                textarea:focus{
+                    outline: none;
+                }
+            }
+        }
+        .comment-show{
+            padding: 20px;
+            padding-top: 5px;
+            .ico{
+                display: inline-block;
+                height: 35px;
+                width: 35px;
+                border-radius: 25px;
+                background-color: $skyblue;
+                color: $white;
+                text-align: center;
+            }
+            .comment-text{
+                margin-left: 8px;
+                display: inline-block;
+                background-color: $white;
+                padding: 8px;
+                max-width: 80%;
+                p{
+                    line-height: 17px;
+                    font-size: .9rem;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}

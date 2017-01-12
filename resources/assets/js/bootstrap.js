@@ -9,7 +9,12 @@ window._ = require('lodash');
  */
 
 window.$ = window.jQuery = require('jquery');
-require('bootstrap-sass');
+// disabled for using bootstrap 4 beta version
+// require('bootstrap-sass');
+// require('tether');
+require('bootstrap');
+
+
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces

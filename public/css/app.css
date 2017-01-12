@@ -1,6 +1,7 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,500,700);
+@import url(./croppie.css);
 .navbar {
   background-color: #21252D;
   border-radius: 0px;
@@ -154,24 +155,9 @@
   margin: 5px;
 }
 
-.middle .panel-default .panel-body .panel-wrapper .fileContainer {
-  position: relative;
-  height: 110px;
-  width: 110px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  margin-bottom: 10px;
-  background-image: url(../images/icons/propic.png);
-  background-position: center;
-  background-size: 110px;
-  border: solid 3px #C5C6C7;
-  border-radius: 100%;
-  padding: .5em;
-}
-
-.middle .panel-default .panel-body .panel-wrapper .fileContainer label {
-  position: relative;
+.middle .panel-default .panel-body .panel-wrapper label {
+  position: absolute;
+  top: 63px;
   height: 35px;
   width: 35px;
   background-image: url("../images/icons/plus.png");
@@ -186,18 +172,32 @@
   z-index: 2;
 }
 
-.middle .panel-default .panel-body .panel-wrapper .fileContainer label [type=file] {
+.middle .panel-default .panel-body .panel-wrapper label [type=file] {
   display: none;
 }
 
-.middle .panel-default .panel-body .panel-wrapper .fileContainer label:hover {
+.middle .panel-default .panel-body .panel-wrapper label:hover {
   opacity: 1;
 }
 
-.middle .panel-default .panel-body .panel-wrapper .fileContainer img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.middle .panel-default .panel-body .panel-wrapper #upload-demo {
+  margin-top: 25px;
+}
+
+.middle .panel-default .panel-body .panel-wrapper #upload-demo .cr-boundary {
+  background-image: url(../images/icons/propic.png);
+  background-position: center;
+  background-size: 130px;
+  border-radius: 50%;
+}
+
+.middle .panel-default .panel-body .panel-wrapper #upload-demo .cr-viewport {
+  border: solid 3px #C5C6C7;
+}
+
+.middle .panel-default .panel-body .panel-wrapper #upload-demo .cr-slider-wrap {
+  margin-top: 5px;
+  margin-bottom: 3px;
 }
 
 .middle .panel-default .panel-body .panel-wrapper input {
@@ -727,22 +727,23 @@
   background-image: url(../images/icons/propic.png);
   background-size: 100%;
   border-radius: 55px;
+  overflow: hidden;
 }
 
-.card .card-header .card-profile-pic .card-name {
+.card .card-header .card-name {
   width: 150px;
   position: absolute;
-  top: 12px;
-  left: 65px;
+  top: 33px;
+  left: 85px;
   color: #636363;
 }
 
-.card .card-header .card-profile-pic .card-name h4 {
+.card .card-header .card-name h4 {
   font-size: 1.2rem;
   margin: 0;
 }
 
-.card .card-header .card-profile-pic .card-name p {
+.card .card-header .card-name p {
   font-size: .7rem;
 }
 
@@ -765,8 +766,8 @@
 }
 
 .card .card-image {
-  height: 250px;
   overflow: hidden;
+  margin-top: 10px;
   margin-bottom: 25px;
 }
 
@@ -949,6 +950,7 @@
 .flex-middle-horizontal {
   display: -webkit-box;
   display: flex;
+  -moz-justify-content: center;
   -webkit-box-pack: center;
   justify-content: center;
 }
@@ -956,11 +958,13 @@
 .flex-middle-vertical {
   display: -webkit-box;
   display: flex;
+  -moz-align-items: center;
   -webkit-box-align: center;
   align-items: center;
 }
 
 .flex-order-column {
+  -moz-flex-direction: column;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;

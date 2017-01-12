@@ -4,7 +4,7 @@
 <div id="panel">
     <div class="container">
         <div class="row" style="margin-top: 40px;">
-            <card>
+            <card dplink="images/images/face.jpg" image="images/images/sample.png">
                 <template slot="admin-name">
                     Dolwin davis
                 </template>

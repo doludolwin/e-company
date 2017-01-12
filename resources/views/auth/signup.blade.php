@@ -4,6 +4,8 @@
 
 @include('layouts.float')
 
+
+<!-- style auth.scss -->
 <div class="container" style="min-height: 750px;">
     <div class="row middle long">
         <div class="col-md-8 col-lg-5 col-sm-8 col-xs-12">
@@ -22,11 +24,13 @@
 <!-- profile pic field  -->
                             <div class="form-group">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 flex-middle-horizontal">
-                                    <div class="fileContainer flex-middle-vertical flex-middle-horizontal" id="container">
+                                    <div class="flex-middle-vertical flex-middle-horizontal" id="container">
                                         <label>
-                                    	    <input type="file" name="avatar" @change="readURL">
+                                    	    <input type="file" name="avatar" id="upload">
                                     	</label>
-                                        <img :src="image" id="draggable" :class="{ none:noImage }" height="200" width="200" alt="your image"  />
+                                        <div id="upload-demo"></div>
+                                        <input type="hidden" id="imagebase64" name="imagebase64">
+                                        <!-- <img :src="image" id="draggable" :class="{ none:noImage }" height="200" width="200" alt="your image"  /> -->
                                     </div>
                                 </div>
                             </div>

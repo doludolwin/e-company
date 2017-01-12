@@ -6,16 +6,16 @@
         <div class="row" style="margin-top: 40px;">
             <card>
                 <template slot="admin-name">
-                    
+                   {{ $post->name }}
                 </template>
                 <template slot="post-date">
-                    
+                    {{ $post->published_at }}
                 </template>
                 <template slot="post-header">
-                   
+                    {{ $post->title }}
                 </template>
                 <template slot="post-body">
-                   
+                    {{ $post->body }}
                 </template>
             </card>
 

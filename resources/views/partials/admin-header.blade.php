@@ -4,17 +4,17 @@
             <div class="header-wrapper">
                 <!-- profile pic -->
                 <div class="profile-pic">
-                    
+                    <img src="/uploads/avatars/{{ $admin->avatar }}" alt="{{ $admin->avatar }}" height="110px" width="110px">
                 </div>
 
                 <div class="name-details">
-                    
+                    <h4>{{ $user->name }}</h4>
                 </div>
                 <div class="bio">
-                   
+                    <p>{{ $admin->bio }}</p>
                 </div>
                 <div class="status">
-                   
+                    <h6>{{ $admin->status }}.</h6>
                 </div>
                 <div class="social-post">
                     <div class="social-icons flex-middle-horizontal">

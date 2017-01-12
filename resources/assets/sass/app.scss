@@ -8,9 +8,15 @@
 @import "./modules/navbar.scss";
 @import "./modules/auth.scss";
 @import "./modules/footer.scss";
+@import "./modules/admin.scss";
+@import "./modules/card.scss";
+
+// plugins
+@import "./croppie.css";
 
 // Bootstrap
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "node_modules/bootstrap/scss/bootstrap";
 
 
 .float{
@@ -32,6 +38,7 @@
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
+    -moz-justify-content: center;
 			justify-content: center;
 
 }
@@ -39,10 +46,12 @@
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
+     -moz-align-items: center;
             align-items: center;
 }
 .flex-order-column{
 	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
 			flex-direction: column;
 }
 
@@ -83,9 +92,5 @@ body{
 	//   	BOILERPLATE RULES
 	//
 	//////////////////////////////////////
-	.card{
-		background-color: $white;
-		margin: 10px -5px 10px -5px;
-		padding: 10px;
-	}
+
 }

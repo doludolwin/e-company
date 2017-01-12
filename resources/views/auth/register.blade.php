@@ -4,7 +4,7 @@
 
 @include('layouts.float')
 
-<div class="container" style="min-height: 500px;">
+<div class="container" style="min-height: 500px; margin-top: 30px;">
     <div class="row middle">
         <div class="col-md-6 col-lg-4 col-sm-8 col-xs-12">
         @if (Session::has('message'))
@@ -15,7 +15,7 @@
                     <h3>join us</h3>
                     <p>Good luck and have fun.</p>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" style="margin-top: 40px;">
                     <form class="form-vertical" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
                         <div class="panel-wrapper">

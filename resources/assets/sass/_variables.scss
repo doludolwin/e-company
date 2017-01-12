@@ -5,6 +5,7 @@
 ///////////////////////////////////////////////
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,500,700);
 
 //////////////////// END /////////////////////
 
@@ -15,9 +16,9 @@
 ///                                         ///
 ///////////////////////////////////////////////
 
-$arial: arial;
-$lato: lato;
-
+$arial: Arial;
+$lato: Lato;
+$roboto: Roboto;
 //////////////////// END /////////////////////
 
 
@@ -35,6 +36,7 @@ $dark-grey: #636363;
 $darkest-grey: #515151;
 $blue: #3266AD;
 $red: #E84D3D;
+$comment-grey: #EFEFEF;
 // gradient-button //
 $green: #00AA58;
 $skyblue: #00A6B9;

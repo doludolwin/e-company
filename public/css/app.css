@@ -155,7 +155,7 @@
   margin: 5px;
 }
 
-.middle .panel-default .panel-body .panel-wrapper label {
+.middle .panel-default .panel-body .panel-wrapper #container label {
   position: absolute;
   top: 63px;
   height: 35px;
@@ -172,11 +172,11 @@
   z-index: 2;
 }
 
-.middle .panel-default .panel-body .panel-wrapper label [type=file] {
+.middle .panel-default .panel-body .panel-wrapper #container label [type=file] {
   display: none;
 }
 
-.middle .panel-default .panel-body .panel-wrapper label:hover {
+.middle .panel-default .panel-body .panel-wrapper #container label:hover {
   opacity: 1;
 }
 

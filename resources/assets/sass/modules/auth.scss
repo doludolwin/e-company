@@ -75,27 +75,29 @@
                     margin: 5px;
                 }
                 // profil pic
-                label{
-                    position: absolute;
-                    top: 63px;
-                    // left: 170px;
-                    height: 35px;
-                    width: 35px;
-                    background-image: url("../images/icons/plus.png");
-                    opacity: .5;
-                    @include transition(opacity,.2s);
-                    background-size: 100%;
-                    background-repeat: no-repeat;
-                    background-color: none;
-                    cursor: pointer;
-                    margin-bottom: 0;
-                    z-index: 2;
-                    [type=file] {
-                        display: none;
+                #container{
+                    label{
+                        position: absolute;
+                        top: 63px;
+                        // left: 170px;
+                        height: 35px;
+                        width: 35px;
+                        background-image: url("../images/icons/plus.png");
+                        opacity: .5;
+                        @include transition(opacity,.2s);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-color: none;
+                        cursor: pointer;
+                        margin-bottom: 0;
+                        z-index: 2;
+                        [type=file] {
+                            display: none;
+                        }
                     }
-                }
-                label:hover{
-                    opacity: 1;
+                    label:hover{
+                        opacity: 1;
+                    }
                 }
                 #upload-demo{
                     margin-top: 25px;

@@ -24,7 +24,7 @@
 
 <!-- Jquery and Bootsrtap 4 cdn -->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" charset="utf-8"></script> -->
-        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" charset="utf-8"></script> -->    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" charset="utf-8"></script>     
 <!-- Jquery UI cdn -->
         
 

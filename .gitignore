@@ -8,3 +8,5 @@ Homestead.yaml
 .env
 Vagrantfile
 /.vagrant
+/public/uploads/avatars/*.*
+/public/uploads/posts/*.*

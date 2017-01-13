@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request; 
+use Illuminate\Foundation\Auth\RedirectsUsers;
 
 class LoginController extends Controller
 {
@@ -21,13 +22,30 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-
+    use RedirectsUsers;
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo ;
+
+     // this function redierects a user to home and a admin to admin home
+    public function redirectPath($user)
+    {
+         if ($user->admin_verify == 1 && $user->verified==1) {
+
+             return $redirectTo = '/adminhome';
+         }
+         else if($user->verified==1)
+         {
+           return $redirectTo = '/home';
+         }
+         else
+         {
+            return $redirectTo='\login';
+         }
+    }
 
     /**
      * Create a new controller instance.

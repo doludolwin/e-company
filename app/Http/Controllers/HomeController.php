@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Post;
+use App\User;
 
 class HomeController extends Controller
 {
+    
     /**
      * Create a new controller instance.
      *
@@ -13,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+    
     }
 
     /**
@@ -21,8 +25,23 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        return view('home');
+        $post=DB::table('posts')
+                ->join('users','user_id','=','users.id')
+                ->select('posts.*','users.name')
+                ->get(); 
+                $i=0;
+        foreach ($post as $posts) {
+
+            $posts= Post::find($posts->id);
+            // $posts->users()->where('user_id',$posts->id)->get();          
+            $post->get($i)->published_at= $posts->created_at->diffForHumans();
+            $i++;                     
+        }
+        // $post=collect([$post]);
+        
+        return view('home',compact('post'));
     }
 }

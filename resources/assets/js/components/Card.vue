@@ -14,7 +14,7 @@
             <!-- end-of-header -->
             <div class="card-body">
                 <h1><slot name="post-header"></slot></h1>
-                 <p><slot name="post-body"></slot><p>
+                 <p><slot name="post-body"></slot></p>
             </div>
             <div class="card-image">
                 <img :src="image" alt="" width="350">

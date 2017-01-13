@@ -4,8 +4,6 @@
             <div class="header-wrapper">
                 <!-- profile pic -->
                 <div class="profile-pic">
-<<<<<<< HEAD
-                    
                     <img src="/uploads/avatars/{{ $admin->avatar }}" alt="{{ $admin->avatar }}" height="110px" width="110px">
                 </div>
 
@@ -17,10 +15,7 @@
                 </div>
                 <div class="status">
                     <h6>{{ $admin->status }}.</h6>
-                   
-=======
-
->>>>>>> post-and-card
+                 post-and-card
                 </div>
                 <div class="social-post">
                     <div class="social-icons flex-middle-horizontal">

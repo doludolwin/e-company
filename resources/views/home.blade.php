@@ -7,7 +7,6 @@
         @foreach($post as $post)
             <card>
                 <template slot="admin-name">
-<<<<<<< HEAD
                     
                  {{ $post->name }}
             </template>
@@ -19,10 +18,7 @@
             </template>
             <template slot="post-body">
                 {{ $post->body }}
-               
-=======
-
->>>>>>> post-and-card
+                post-and-card
                 </template>
             </card>
         @endforeach
